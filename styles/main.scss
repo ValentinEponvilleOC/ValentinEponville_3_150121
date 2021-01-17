@@ -1,0 +1,100 @@
+@import "./utils/variables";
+
+$primaire: #9356DC;
+$secondaire: #FF79DA;
+$tertiaire: #99E2D0;
+$lightgrey: #F6F6F6;
+
+h1 {
+    font-size: 1.5rem;
+}
+
+body {
+    width: 375px;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+}
+
+header, .gps {
+    position: relative;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+    box-shadow: 0rem 1px 5px 0px rgba(41, 41, 41, 0.5);
+    z-index: 2;
+    overflow: hidden;
+}
+
+.gps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAEAEA;
+    width: 375px;
+    z-index: 1;
+}
+
+.fa-map-marker-alt {
+    height: 20px;
+    position: relative;
+    right: 0.75rem;
+}
+
+section:nth-child(1) {
+    border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background-color: $lightgrey;
+    height: 22rem;
+}
+
+section:nth-child(1) h1 {
+    border: 2px solid red;
+    width: 75%;
+}
+
+section:nth-child(1) p:nth-child(3) {
+    border: 2px solid red;
+    font-size: 1.1rem;
+    color:rgba(41, 41, 41, 0.75)
+}
+
+.explore {
+    background: linear-gradient(-10deg, $primaire, $secondaire);
+    border-radius: 40px 40px 40px 40px;
+    border: none;
+    width: 65%;
+    font-size: 1.1rem;
+    color: white;
+    font-family: 'Roboto Medium'; 
+}
+
+section:nth-child(2) {
+    border: 2px solid blue;
+    padding: 1rem;
+}
+
+.étapes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    background-color: $lightgrey;
+    margin: 1rem;
+    border-radius: 25px 25px 25px 25px;
+    height: 4rem;
+}
+
+.étapes h2, .fa-mobile-alt, .fa-bars, .fa-store {
+    height: 20px;
+    font-size: 1rem;
+    border: 2px solid purple;
+    padding-right: 1.5rem;
+}
