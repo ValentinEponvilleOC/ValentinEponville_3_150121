@@ -5,8 +5,18 @@ $secondaire: #FF79DA;
 $tertiaire: #99E2D0;
 $lightgrey: #F6F6F6;
 
+@mixin dégradé {
+    background: linear-gradient(-10deg, $primaire, $secondaire);
+}
+
+
 h1 {
     font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+    font-family: 'Roboto Medium';
 }
 
 body {
@@ -45,7 +55,7 @@ header {
 }
 
 section:nth-child(1) {
-    border: 2px solid green;
+    //border: 2px solid green;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -56,12 +66,12 @@ section:nth-child(1) {
 }
 
 section:nth-child(1) h1 {
-    border: 2px solid red;
+    //border: 2px solid red;
     width: 75%;
 }
 
 section:nth-child(1) p:nth-child(3) {
-    border: 2px solid red;
+    //border: 2px solid red;
     font-size: 1.1rem;
     color:rgba(41, 41, 41, 0.75)
 }
@@ -77,8 +87,9 @@ section:nth-child(1) p:nth-child(3) {
 }
 
 section:nth-child(2) {
-    border: 2px solid blue;
+    //border: 2px solid blue;
     padding: 1rem;
+    height: auto;
 }
 
 .étapes {
@@ -96,10 +107,11 @@ section:nth-child(2) {
         }*/
 }
 
-.étapes:nth-child(1), .étapes {
+.étapes{
     &:hover {
         cursor: pointer;
         background-color: rgba($color: $primaire, $alpha: 0.15);
+        color: rgba($color: $primaire, $alpha: 1.0);
 }
 }
 
@@ -130,3 +142,62 @@ section:nth-child(2) {
     right: 0.5rem;
     margin-right: 0.5rem;
 }
+
+section:nth-child(3) { /* Restaurant */
+    border: 2px solid blue;
+    padding: 1rem;
+    height: auto;
+    background-color: $lightgrey;
+}
+
+.vignette {
+    box-sizing: content-box;
+    border: 1px solid red;
+    border-radius: 20px 20px 20px 20px;
+    width: 100%;
+    height: 17.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: flex-start;
+    background-color: white;
+}
+
+.img_vignette {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 5rem;
+    border: 2px solid red;
+}
+
+.des_vignette {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 2px solid blue;
+}
+
+.nom_et_menu {
+    position: relative;   
+    height: 100%;
+    width: 80%;
+    bottom: 4.5rem;
+    border: 2px solid green;
+    display: inline;
+    line-height: 0.5rem;
+    padding-left: 1rem;
+}
+
+.fa-heart {
+    position: relative;
+    bottom: 5rem;
+        &:active {
+            cursor: pointer;
+            opacity: 0;
+        }
+    }
+    
+
+
