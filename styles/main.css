@@ -106,9 +106,9 @@ section:nth-child(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -117,12 +117,48 @@ section:nth-child(2) {
   margin: 1rem;
   border-radius: 25px 25px 25px 25px;
   height: 4rem;
+  /*&:hover {
+            cursor: pointer;
+            background-color: rgba($color: $primaire, $alpha: 0.15);
+        }*/
+}
+
+.étapes:nth-child(1):hover, .étapes:hover {
+  cursor: pointer;
+  background-color: rgba(147, 86, 220, 0.15);
 }
 
 .étapes h2, .fa-mobile-alt, .fa-bars, .fa-store {
   height: 20px;
   font-size: 1rem;
-  border: 2px solid purple;
-  padding-right: 1.5rem;
+  /*border: 2px solid purple;*/
+  padding-right: 1rem;
+}
+
+.fa-mobile-alt, .fa-bars, .fa-store {
+  width: 10px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.petits_cercles {
+  border: #9356DC;
+  background-color: #9356DC;
+  color: white;
+  font-size: 0.75rem;
+  border-radius: 40px 40px 40px 40px;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  right: 0.5rem;
+  margin-right: 0.5rem;
 }
 /*# sourceMappingURL=main.css.map */

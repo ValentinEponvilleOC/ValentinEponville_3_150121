@@ -83,18 +83,50 @@ section:nth-child(2) {
 
 .étapes {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     text-align: left;
     background-color: $lightgrey;
     margin: 1rem;
     border-radius: 25px 25px 25px 25px;
     height: 4rem;
+        /*&:hover {
+            cursor: pointer;
+            background-color: rgba($color: $primaire, $alpha: 0.15);
+        }*/
+}
+
+.étapes:nth-child(1), .étapes {
+    &:hover {
+        cursor: pointer;
+        background-color: rgba($color: $primaire, $alpha: 0.15);
+}
 }
 
 .étapes h2, .fa-mobile-alt, .fa-bars, .fa-store {
     height: 20px;
     font-size: 1rem;
-    border: 2px solid purple;
-    padding-right: 1.5rem;
+    /*border: 2px solid purple;*/
+    padding-right: 1rem;
+}
+
+.fa-mobile-alt, .fa-bars, .fa-store {
+    width: 10px;
+    color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.petits_cercles {
+    border: $primaire;
+    background-color: $primaire;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 40px 40px 40px 40px;
+    width:1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+    position: relative;
+    right: 0.5rem;
+    margin-right: 0.5rem;
 }
