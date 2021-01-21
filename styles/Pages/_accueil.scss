@@ -1,0 +1,170 @@
+.gps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EAEAEA;
+    width: 375px;
+    z-index: 1;
+}
+
+.fa-map-marker-alt {
+    height: 20px;
+    position: relative;
+    right: 0.75rem;
+}
+
+section:nth-child(1) {
+    //border: 2px solid green;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    background-color: $lightgrey;
+    height: 22rem;
+}
+
+section:nth-child(1) h1 {
+    //border: 2px solid red;
+    width: 75%;
+}
+
+section:nth-child(1) p:nth-child(3) {
+    //border: 2px solid red;
+    font-size: 1.1rem;
+    color:rgba(41, 41, 41, 0.75)
+}
+
+section:nth-child(2) {
+    //border: 2px solid blue;
+    padding: 1rem;
+    height: auto;
+}
+
+.étapes {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    background-color: $lightgrey;
+    margin: 1rem;
+    border-radius: 25px 25px 25px 25px;
+    height: 4rem;
+    @include ombre_portée;
+        /*&:hover {
+            cursor: pointer;
+            background-color: rgba($color: $primaire, $alpha: 0.15);
+        }*/
+}
+
+.étapes{
+    &:hover {
+        cursor: pointer;
+        background-color: rgba($color: $primaire, $alpha: 0.15);
+        color: rgba($color: $primaire, $alpha: 1.0);
+}
+}
+
+.étapes h2, .fa-mobile-alt, .fa-bars, .fa-store {
+    height: 20px;
+    font-size: 1rem;
+    /*border: 2px solid purple;*/
+    padding-right: 1rem;
+}
+
+.fa-mobile-alt, .fa-bars, .fa-store {
+    width: 10px;
+    color: rgba($color: #000000, $alpha: 0.5);
+}
+
+.petits_cercles {
+    border: $primaire;
+    background-color: $primaire;
+    color: white;
+    font-size: 0.75rem;
+    border-radius: 40px 40px 40px 40px;
+    width:1.5rem;
+    height: 1.5rem;
+    display: flex;
+    justify-content: center;   
+    align-items: center;
+    position: relative;
+    right: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+section:nth-child(3) { /* Restaurant */
+    //border: 2px solid blue;
+    padding: 1rem;
+    height: auto;
+    padding-bottom: 3rem;
+    background-color: $lightgrey;
+}
+
+//.vignette:nth-child(4)  // menu à la française
+
+
+
+.vignette {
+    margin-bottom: 1rem;
+    box-sizing: content-box;
+    //border: 1px solid red;
+    border-radius: 20px 20px 20px 20px;
+    width: 100%;
+    height: 17.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: flex-start;
+    background-color: white;
+    @include ombre_portée;
+        &__img {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            bottom: 5rem;
+            //border: 2px solid red;
+        }
+        &__new {
+            width: 5rem;
+            height: 2rem;
+            background-color: $tertiaire;
+            position: absolute; 
+            right: 1rem;
+            margin-right: 1rem;
+            margin-top: 1rem;        
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-family: 'Roboto Black';
+            color: darken($color: $tertiaire, $amount: 35)
+        }
+        &__des {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            //border: 2px solid blue;
+        }       
+}
+
+.nom_et_menu {
+    position: relative;   
+    height: 100%;
+    width: 80%;
+    bottom: 4.5rem;
+    //border: 2px solid green;
+    display: inline;
+    line-height: 0.5rem;
+    padding-left: 1rem;
+}
+
+.fa-heart {
+    position: relative;
+    bottom: 5rem;
+        &:active {
+            cursor: pointer;
+            opacity: 0;
+        }
+    }

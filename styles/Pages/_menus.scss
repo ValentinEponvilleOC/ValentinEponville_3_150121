@@ -1,0 +1,107 @@
+.fa-arrow-left {
+    position: relative;
+    right: 3rem;
+}
+
+.fond {
+    width: auto;
+    height: 15rem;
+    //border: 2px solid green;
+    z-index: 1;
+    display: flex;
+    overflow: hidden;
+}
+
+.img_fond {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.titre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titre .fa-heart {
+    transform: scale(2);
+    position: relative;
+    right: 1rem;
+}
+
+h1 {
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.5rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-family: 'Roboto Thin';
+    border-bottom: 3px solid $tertiaire;
+    width: 12%;
+    height: 7%;
+}
+
+section:nth-child(3) h2 {
+    margin-top: 2rem;
+}
+
+section:nth-child(4) h2 {
+    margin-top: 2rem;
+}
+
+.carte {
+    border: 2px solid blue;  
+    border-radius: 40px 40px 0px 0px;
+    background-color: $lightgrey;
+    height: auto;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: -3rem;
+    position: relative;
+    bottom: 3rem;
+    width: auto;
+    
+}
+
+.plat {
+    background-color: white;
+    border-radius: 20px 20px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 3.5rem;
+    padding: 1rem 1rem 1rem 1rem;
+    margin-top: 1rem;
+}
+
+.plat_des {
+    //border: 2px solid red;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 0rem;
+    font-size: 0.85rem;
+}
+
+.plat h3 {
+    position: relative;
+    top: 0.25rem;
+}
+
+.plat p {
+    position: relative;
+    bottom: 0.25rem;
+}
+
+.prix {
+    position: relative;
+    bottom: 0.5rem;
+    font-size: 0.85rem;
+    font-family: 'Roboto Medium';
+} 

@@ -1,0 +1,21 @@
+.explore {
+    background: linear-gradient(-10deg, $primaire, $secondaire);
+    border-radius: 40px 40px 40px 40px;
+    border: none;
+    width: 65%;
+    font-size: 1.1rem;
+    color: white;
+    font-family: 'Roboto Medium'; 
+    @include ombre_portée;  
+    &--commander {
+        height: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    } 
+}
+
+.button_commander {
+    display: flex;
+    justify-content: center;
+}
+

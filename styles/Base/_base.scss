@@ -1,0 +1,19 @@
+body {
+    width: 375px;
+    height: auto;
+    margin: auto;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    border: 2px solid red;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+h2 {
+    font-size: 1rem;
+    font-family: 'Roboto Medium';
+}
