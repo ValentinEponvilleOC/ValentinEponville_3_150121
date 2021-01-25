@@ -1,6 +1,13 @@
 .fa-arrow-left {
     position: relative;
     right: 3rem;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+header a {
+    color: black;
 }
 
 .fond {
@@ -24,10 +31,17 @@
     align-items: center;
 }
 
-.titre .fa-heart {
-    transform: scale(2);
-    position: relative;
-    right: 1rem;
+.coeur h3 {
+    font-size: 35px;
+    color: black;    
+    &:hover {
+        cursor: pointer;
+        @include couleur_coeur;
+    }
+}
+
+.coeur h3 .fa-heart {
+display: flex;
 }
 
 h1 {

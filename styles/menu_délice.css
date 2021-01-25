@@ -42,6 +42,14 @@ h2 {
   margin-bottom: 4rem;
 }
 
+.explore:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 10px 10px black;
+          box-shadow: 0px 10px 10px black;
+  color: white;
+  opacity: 0.5;
+}
+
 .button_commander {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,6 +86,11 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
 }
 
 .proposer {
@@ -152,6 +165,14 @@ footer {
   right: 3rem;
 }
 
+.fa-arrow-left:hover {
+  cursor: pointer;
+}
+
+header a {
+  color: black;
+}
+
 .fond {
   width: auto;
   height: 15rem;
@@ -180,11 +201,25 @@ footer {
           align-items: center;
 }
 
-.titre .fa-heart {
-  -webkit-transform: scale(2);
-          transform: scale(2);
-  position: relative;
-  right: 1rem;
+.coeur h3 {
+  font-size: 35px;
+  color: black;
+}
+
+.coeur h3:hover {
+  cursor: pointer;
+  background: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(-90deg, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(-90deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coeur h3 .fa-heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 h1 {

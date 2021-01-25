@@ -6,11 +6,16 @@
     font-size: 1.1rem;
     color: white;
     font-family: 'Roboto Medium'; 
-    @include ombre_portée;  
+    @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.15));  
     &--commander {
         height: 3rem;
         margin-top: 2rem;
         margin-bottom: 4rem;
+    }
+    &:hover {
+        cursor: pointer;
+        @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 1));
+        @include fondu_blanc (white, 0.5);
     } 
 }
 
