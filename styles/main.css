@@ -1,4 +1,9 @@
 @charset "UTF-8";
+html {
+  width: 375px;
+  margin: auto;
+}
+
 body {
   width: 375px;
   height: auto;
@@ -296,11 +301,23 @@ section:nth-child(3) {
 .vignette a {
   text-decoration: none;
   color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .vignette {
   margin-bottom: 1rem;
   border-radius: 20px 20px 20px 20px;
+  position: relative;
   width: 100%;
   height: auto;
   display: -webkit-box;
@@ -334,12 +351,12 @@ section:nth-child(3) {
 .vignette__new {
   width: 5rem;
   height: 2rem;
-  font-size: 0.85rem;
-  font-family: 'Roboto Black';
+  font-size: 0.95rem;
+  font-family: 'Roboto Medium';
   color: #2c9c81;
   background-color: #99E2D0;
   position: absolute;
-  right: 1rem;
+  right: auto;
   margin-right: 1rem;
   margin-top: 1rem;
   z-index: 3;
@@ -411,5 +428,327 @@ section:nth-child(3) {
 
 .coeur h3 {
   color: rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes validation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: position relative;
+            transform: position relative;
+    left: 20%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: position relative;
+            transform: position relative;
+    left: 0%;
+  }
+}
+
+@keyframes validation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: position relative;
+            transform: position relative;
+    left: 20%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: position relative;
+            transform: position relative;
+    left: 0%;
+  }
+}
+
+@-webkit-keyframes validation_retour {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: position relative;
+            transform: position relative;
+    left: 0%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: position relative;
+            transform: position relative;
+    left: 20%;
+  }
+}
+
+@keyframes validation_retour {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: position relative;
+            transform: position relative;
+    left: 0%;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: position relative;
+            transform: position relative;
+    left: 20%;
+  }
+}
+
+@-webkit-keyframes logo_v {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1.25);
+            transform: rotate(0deg) scale(1.25);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1.25);
+            transform: rotate(360deg) scale(1.25);
+  }
+}
+
+@keyframes logo_v {
+  0% {
+    -webkit-transform: rotate(0deg) scale(1.25);
+            transform: rotate(0deg) scale(1.25);
+  }
+  100% {
+    -webkit-transform: rotate(360deg) scale(1.25);
+            transform: rotate(360deg) scale(1.25);
+  }
+}
+
+.fa-arrow-left {
+  position: relative;
+  right: 3rem;
+}
+
+.fa-arrow-left:hover {
+  cursor: pointer;
+}
+
+header a {
+  color: black;
+}
+
+.fond {
+  width: auto;
+  height: 15rem;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.img_fond {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.titre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.coeur h3 {
+  font-size: 35px;
+  color: black;
+}
+
+.coeur h3:hover {
+  cursor: pointer;
+  background: -webkit-gradient(linear, right top, left top, from(#9356DC), to(#FF79DA));
+  background: linear-gradient(-90deg, #9356DC, #FF79DA);
+  background: -webkit-linear-gradient(-90deg, #9356DC, #FF79DA);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.coeur h3 .fa-heart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.titre > h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 1.5rem;
+}
+
+section > h2 {
+  text-transform: uppercase;
+  font-family: 'Roboto Thin';
+  border-bottom: 3px solid #99E2D0;
+  width: 12%;
+  height: 7%;
+}
+
+section {
+  position: relative;
+  bottom: 1rem;
+}
+
+.carte {
+  border-radius: 40px 40px 0px 0px;
+  background-color: #F6F6F6;
+  height: auto;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1rem;
+  margin-bottom: -3rem;
+  position: relative;
+  bottom: 3rem;
+  width: auto;
+}
+
+.plat {
+  background-color: white;
+  border-radius: 20px 20px 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  width: 30rem;
+  overflow: hidden;
+  border: 1px solid blue;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 3rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  overflow: hidden;
+  width: auto;
+}
+
+.plat__des {
+  width: auto;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  line-height: 0rem;
+  font-size: 0.85rem;
+  border: 2px solid blue;
+}
+
+.plat__prix {
+  position: relative;
+  top: 0.75rem;
+  font-size: 0.85rem;
+  font-family: 'Roboto Black';
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  border: 2px solid green;
+}
+
+.plat__anim {
+  width: 3.5rem;
+  height: 4.5rem;
+  position: relative;
+  left: 11%;
+  /* remettre à 50% */
+  background-color: #99E2D0;
+  margin-left: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+.plat__anim > .fa-check-circle {
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
+  color: white;
+}
+
+.plat:hover {
+  cursor: pointer;
+}
+
+.plat:hover > .plat__prixetanim {
+  -webkit-animation: validation 500ms both;
+          animation: validation 500ms both;
+}
+
+.plat:not(:hover) > .plat__prixetanim {
+  -webkit-animation: validation_retour 750ms both;
+          animation: validation_retour 750ms both;
+}
+
+.plat:hover > .plat__prixetanim > .plat__anim > .fa-check-circle {
+  -webkit-animation: logo_v 500ms both;
+          animation: logo_v 500ms both;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+.plat__prixetanim {
+  border: 2px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  position: relative;
+  /*transition-property: position relative;*/
+}
+
+.plat__des h3 {
+  position: relative;
+  top: 0.25rem;
+}
+
+.plat__des p {
+  position: relative;
+  bottom: 0.25rem;
 }
 /*# sourceMappingURL=main.css.map */

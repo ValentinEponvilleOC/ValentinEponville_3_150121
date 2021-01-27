@@ -111,12 +111,17 @@ section:nth-child(3) {
 .vignette a {
     text-decoration: none;
     color: black;
+    display: flex;
+    height: auto;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .vignette {
     margin-bottom: 1rem;
     //border: 1px solid red;
     border-radius: 20px 20px 20px 20px;
+    position: relative;
     width: 100%;
     height: auto;
     display: flex;
@@ -138,12 +143,12 @@ section:nth-child(3) {
         &__new {
             width: 5rem;
             height: 2rem;
-            font-size: 0.85rem;
-            font-family: 'Roboto Black';
+            font-size: 0.95rem;
+            font-family: 'Roboto Medium';
             color: darken($color: $tertiaire, $amount: 35);
             background-color: $tertiaire;
             position: absolute; 
-            right: 1rem;
+            right: auto;
             margin-right: 1rem;
             margin-top: 1rem;
             z-index: 3;        
