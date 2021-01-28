@@ -2,12 +2,12 @@
     0% {
         transform: scale(1);
         transform: position relative;
-        left: 20%;
+        left: 0%;
     }
     100% {
         transform: scale(1);
         transform: position relative;
-        left: 0%;
+        left: 20%;
     }
 }
 
@@ -15,12 +15,12 @@
     0% {
         transform: scale(1);
         transform: position relative;
-        left: 0%;
+        left: 20%;
     }
     100% {
         transform: scale(1);
         transform: position relative;
-        left: 20%;
+        left: 0%;
     }
 }
 
@@ -30,6 +30,17 @@
     }
     100% {
         transform: rotate(360deg) scale(1.25);
+    }
+}
+
+@keyframes flexing {
+    0% {
+        transform: scale(1);
+        transform: flex
+    }
+    100% {
+        transform: scale(1);
+        transform: flex;
     }
 }
 
@@ -64,11 +75,18 @@ header a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 20rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    //border: 2px solid blue;
 }
 
 .coeur h3 {
     font-size: 35px;
-    color: black;    
+    color: black;
+    position: relative;
+    top: 0.35rem;
+    //border: 2px solid red;    
     &:hover {
         cursor: pointer;
         @include couleur_coeur;
@@ -84,7 +102,7 @@ display: flex;
     font-size: 1.5rem;
 }
 
-section > h2 {
+.type_repas > h2 {
     text-transform: uppercase;
     font-family: 'Roboto Thin';
     border-bottom: 3px solid $tertiaire;
@@ -92,9 +110,11 @@ section > h2 {
     height: 7%;
 }
 
-section {
+.type_repas {
     position: relative;
     bottom: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .carte {
@@ -102,43 +122,52 @@ section {
     border-radius: 40px 40px 0px 0px;
     background-color: $lightgrey;
     height: auto;
+    width: auto;
     z-index: 3;
     display: flex;
+    //flex: auto;
     flex-direction: column;
+    justify-content: center;
     padding: 1rem;
     margin-bottom: -3rem;
     position: relative;
     bottom: 3rem;
+}
+
+.plat_cache {
+    border-radius: 20px 20px 20px 20px;
+    //border: 1px solid blue;
+    overflow: hidden;
     width: auto;
+    height: auto;
+    margin-bottom: 1rem;
+    @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.05));
 }
 
 .plat {
     background-color: white;
-    //border: 1px solid red;
     border-radius: 20px 20px 20px 20px;
-    display: flex;
-    height: auto;
-    width: 30rem;
-    overflow: hidden;
-    border: 1px solid blue;
+    //border: 1px solid blue;
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    //justify-content: space-between;
+    width: 20rem;
     height: 3rem;
-    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     overflow: hidden;
-    width: auto;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    
         &__des {
-        width: auto;
+        width: 10rem;
         height: auto;
         display: flex;
-        flex-basis: auto;
+        flex: 1 0 auto;
         flex-direction: column;
         justify-content: center;
-        line-height: 0rem;
+        line-height: 1rem;
         font-size: 0.85rem;
-        border: 2px solid blue;
+        //border: 2px solid blue;
+        transition-duration: 500ms;
         }
         &__prix {
         //flex: auto;
@@ -146,8 +175,7 @@ section {
         top: 0.75rem;
         font-size: 0.85rem;
         font-family: 'Roboto Black';
-        flex-basis: auto;
-        border: 2px solid green;
+        //border: 2px solid green;
         //width: auto;
         }
         &__anim {
@@ -158,7 +186,6 @@ section {
             background-color: $tertiaire;
             margin-left: 0.5rem;
             display: flex;
-            flex-basis: auto;
             justify-content: center;
             align-items: center;
             overflow: hidden;
@@ -171,12 +198,18 @@ section {
         &:hover {
             cursor: pointer;
         }
-        &:hover > &__prixetanim {
+        &:hover > &__des {
+            flex: 0.2 0 auto;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; 
+        }
+        /*&:hover > &__prixetanim {
             animation: validation 500ms both;
         }
         &:not(:hover) > &__prixetanim {
             animation: validation_retour 750ms both;
-        }
+        }*/
         &:hover > &__prixetanim > &__anim > .fa-check-circle {
             animation: logo_v 500ms both;
             animation-timing-function: linear;
@@ -184,23 +217,44 @@ section {
 }        
 
 .plat__prixetanim {
-    border: 2px solid red;
+    white-space: nowrap;
+    //border: 2px solid red;
     display: flex;
     height: auto;
     justify-content: center;
     align-items: center;
-    width: auto;
+    //width: auto;
+    flex: 0 0 auto;
     position: relative;
+    left: 10%;
     /*transition-property: position relative;*/
 }
 
-.plat__des h3 {
-    position: relative;
-    top: 0.25rem;
+.plat__des h3 { 
+    /*position: relative;
+    bottom: 0.25rem;*/
+    display: inline;
+    vertical-align: middle;
+    //border: 2px solid pink;
+    height: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
 }
 
 .plat__des p {
-    position: relative;
-    bottom: 0.25rem;
+    /*position: relative;
+    bottom: 0.25rem;*/
+    display: inline;
+    vertical-align: middle;
+    //border: 2px solid pink;
+    height: 1rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-block-start: 0rem;
+    margin-block-end: 0rem;
 }
 

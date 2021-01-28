@@ -1,0 +1,8 @@
+.box {
+    border: 2px solid black;
+    width: 10rem;
+    height: 3rem;
+    /*white-space: nowrap;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -187,7 +187,7 @@ footer a {
   right: 0.75rem;
 }
 
-section:nth-child(1) {
+.section_accueil_1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -211,16 +211,16 @@ button a {
   color: white;
 }
 
-section:nth-child(1) h1 {
+.section_accueil_1 h1 {
   width: 75%;
 }
 
-section:nth-child(1) p:nth-child(3) {
+.section_accueil_1 p:nth-child(3) {
   font-size: 1.1rem;
   color: rgba(41, 41, 41, 0.75);
 }
 
-section:nth-child(2) {
+.section_accueil_2 {
   padding: 1rem;
   height: auto;
 }
@@ -291,7 +291,7 @@ section:nth-child(2) {
   margin-right: 0.5rem;
 }
 
-section:nth-child(3) {
+.section_accueil_3 {
   padding: 1rem;
   height: auto;
   padding-bottom: 3rem;
@@ -436,14 +436,14 @@ section:nth-child(3) {
             transform: scale(1);
     -webkit-transform: position relative;
             transform: position relative;
-    left: 20%;
+    left: 0%;
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
     -webkit-transform: position relative;
             transform: position relative;
-    left: 0%;
+    left: 20%;
   }
 }
 
@@ -453,14 +453,14 @@ section:nth-child(3) {
             transform: scale(1);
     -webkit-transform: position relative;
             transform: position relative;
-    left: 20%;
+    left: 0%;
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
     -webkit-transform: position relative;
             transform: position relative;
-    left: 0%;
+    left: 20%;
   }
 }
 
@@ -470,14 +470,14 @@ section:nth-child(3) {
             transform: scale(1);
     -webkit-transform: position relative;
             transform: position relative;
-    left: 0%;
+    left: 20%;
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
     -webkit-transform: position relative;
             transform: position relative;
-    left: 20%;
+    left: 0%;
   }
 }
 
@@ -487,14 +487,14 @@ section:nth-child(3) {
             transform: scale(1);
     -webkit-transform: position relative;
             transform: position relative;
-    left: 0%;
+    left: 20%;
   }
   100% {
     -webkit-transform: scale(1);
             transform: scale(1);
     -webkit-transform: position relative;
             transform: position relative;
-    left: 20%;
+    left: 0%;
   }
 }
 
@@ -517,6 +517,36 @@ section:nth-child(3) {
   100% {
     -webkit-transform: rotate(360deg) scale(1.25);
             transform: rotate(360deg) scale(1.25);
+  }
+}
+
+@-webkit-keyframes flexing {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: flex;
+            transform: flex;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: flex;
+            transform: flex;
+  }
+}
+
+@keyframes flexing {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: flex;
+            transform: flex;
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform: flex;
+            transform: flex;
   }
 }
 
@@ -559,11 +589,16 @@ header a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 20rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .coeur h3 {
   font-size: 35px;
   color: black;
+  position: relative;
+  top: 0.35rem;
 }
 
 .coeur h3:hover {
@@ -587,7 +622,7 @@ header a {
   font-size: 1.5rem;
 }
 
-section > h2 {
+.type_repas > h2 {
   text-transform: uppercase;
   font-family: 'Roboto Thin';
   border-bottom: 3px solid #99E2D0;
@@ -595,15 +630,18 @@ section > h2 {
   height: 7%;
 }
 
-section {
+.type_repas {
   position: relative;
   bottom: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 .carte {
   border-radius: 40px 40px 0px 0px;
   background-color: #F6F6F6;
   height: auto;
+  width: auto;
   z-index: 3;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -612,11 +650,23 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 1rem;
   margin-bottom: -3rem;
   position: relative;
   bottom: 3rem;
+}
+
+.plat_cache {
+  border-radius: 20px 20px 20px 20px;
+  overflow: hidden;
   width: auto;
+  height: auto;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
 }
 
 .plat {
@@ -625,11 +675,6 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: auto;
-  width: 30rem;
-  overflow: hidden;
-  border: 1px solid blue;
-  display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -637,23 +682,27 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  width: 20rem;
   height: 3rem;
-  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   overflow: hidden;
-  width: auto;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  /*&:hover > &__prixetanim {
+            animation: validation 500ms both;
+        }
+        &:not(:hover) > &__prixetanim {
+            animation: validation_retour 750ms both;
+        }*/
 }
 
 .plat__des {
-  width: auto;
+  width: 10rem;
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -661,9 +710,10 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  line-height: 0rem;
+  line-height: 1rem;
   font-size: 0.85rem;
-  border: 2px solid blue;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
 .plat__prix {
@@ -671,9 +721,6 @@ section {
   top: 0.75rem;
   font-size: 0.85rem;
   font-family: 'Roboto Black';
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
-  border: 2px solid green;
 }
 
 .plat__anim {
@@ -687,8 +734,6 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -708,14 +753,13 @@ section {
   cursor: pointer;
 }
 
-.plat:hover > .plat__prixetanim {
-  -webkit-animation: validation 500ms both;
-          animation: validation 500ms both;
-}
-
-.plat:not(:hover) > .plat__prixetanim {
-  -webkit-animation: validation_retour 750ms both;
-          animation: validation_retour 750ms both;
+.plat:hover > .plat__des {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2 0 auto;
+          flex: 0.2 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .plat:hover > .plat__prixetanim > .plat__anim > .fa-check-circle {
@@ -726,7 +770,7 @@ section {
 }
 
 .plat__prixetanim {
-  border: 2px solid red;
+  white-space: nowrap;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -737,18 +781,41 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: auto;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   position: relative;
+  left: 10%;
   /*transition-property: position relative;*/
 }
 
 .plat__des h3 {
-  position: relative;
-  top: 0.25rem;
+  /*position: relative;
+    bottom: 0.25rem;*/
+  display: inline;
+  vertical-align: middle;
+  height: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-margin-before: 0rem;
+          margin-block-start: 0rem;
+  -webkit-margin-after: 0rem;
+          margin-block-end: 0rem;
 }
 
 .plat__des p {
-  position: relative;
-  bottom: 0.25rem;
+  /*position: relative;
+    bottom: 0.25rem;*/
+  display: inline;
+  vertical-align: middle;
+  height: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-margin-before: 0rem;
+          margin-block-start: 0rem;
+  -webkit-margin-after: 0rem;
+          margin-block-end: 0rem;
 }
 /*# sourceMappingURL=main.css.map */

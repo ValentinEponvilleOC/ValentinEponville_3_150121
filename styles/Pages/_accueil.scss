@@ -13,7 +13,7 @@
     right: 0.75rem;
 }
 
-section:nth-child(1) {
+.section_accueil_1 {
     //border: 2px solid green;
     display: flex;
     flex-direction: column;
@@ -29,18 +29,18 @@ button a {
     color: white;
 }
 
-section:nth-child(1) h1 {
+.section_accueil_1 h1 {
     //border: 2px solid red;
     width: 75%;
 }
 
-section:nth-child(1) p:nth-child(3) {
+.section_accueil_1 p:nth-child(3) {
     //border: 2px solid red;
     font-size: 1.1rem;
     color:rgba(41, 41, 41, 0.75)
 }
 
-section:nth-child(2) {
+.section_accueil_2 {
     //border: 2px solid blue;
     padding: 1rem;
     height: auto;
@@ -100,7 +100,7 @@ section:nth-child(2) {
     margin-right: 0.5rem;
 }
 
-section:nth-child(3) { 
+.section_accueil_3 { 
     //border: 2px solid blue;
     padding: 1rem;
     height: auto;
