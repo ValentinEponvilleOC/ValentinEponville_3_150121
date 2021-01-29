@@ -16,6 +16,11 @@
         cursor: pointer;
         @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 1));
         @include fondu_blanc (white, 0.5);
+    }
+    @include mobile-only {
+        height: 6rem;
+        width: 30rem;
+        font-size: 1.75rem;
     } 
 }
 

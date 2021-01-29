@@ -6,17 +6,36 @@ header {
     box-shadow: 0rem 1px 5px 0px rgba(41, 41, 41, 0.5);
     z-index: 2;
     overflow: hidden;
-}
+    @include mobile-only {
+        justify-content: flex-start;
+        padding-left: 3rem;
+        height: auto;
+    }
+    & > .gps {
+        display: none;
+        @include mobile-only {
+            display: flex;
+            margin-left: 3rem;
+        }
+    }
+}  
 
 footer {
+    //border: 2px solid pink;
     background: rgb(36, 36, 36);
     width: 100%;
     height: 13rem;
     display: flex;
     align-items: center;
+    @include mobile-only {
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: auto;
+    }
 }
 
 footer a {
+    //border: 2px solid red;
     text-decoration: none;
     color: white;
 }
@@ -26,6 +45,9 @@ footer a {
     align-items: center;
     justify-content: space-between;
     height: 24px;
+    @include mobile-only {
+        height: auto;
+    }
 }
 
 .devenir {
@@ -33,6 +55,9 @@ footer a {
     align-items: center;
     justify-content: space-between;
     height: 24px;
+    @include mobile-only {
+        height: auto;
+    }
 }
 
 .contenu {
@@ -46,6 +71,14 @@ footer a {
     width: 15rem;
     line-height: 0rem;
     margin-left: 1rem;
+    @include mobile-only {
+        flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: auto; 
+        margin-right: 1rem;
+    }
 }
 
 .titre_footer {
@@ -54,6 +87,10 @@ footer a {
     //border: 2px solid red;
     position: relative;
     bottom: 1rem;
+    @include mobile-only {
+        width: auto;
+        position: unset;
+    }
 }
 
 .fa-utensils {
@@ -64,6 +101,14 @@ footer a {
 .fa-hands-helping {
     transform: scale(0.75);
     margin-right: 0.5rem;
+}
+
+footer nav {
+    //border: 2px solid red;
+    width: 100%;
+    @include mobile-only {
+        margin-top: 2rem;
+    }
 }
 
 

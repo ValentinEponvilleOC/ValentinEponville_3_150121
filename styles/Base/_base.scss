@@ -1,21 +1,23 @@
-html {
-    width: 375px;
-    margin: auto;
-}
-
 body {
     width: 375px;
     height: auto;
     margin: auto;
+    //padding: auto;
     font-family: 'Roboto', sans-serif;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
     //border: 2px solid red;
+    @include mobile-only {
+        width: auto;
+    }
 }
 
 h1 {
     font-size: 1.5rem;
+    @include mobile-only {
+        font-size: 2rem;
+    }
 }
 
 h2 {
