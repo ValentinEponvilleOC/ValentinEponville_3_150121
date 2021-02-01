@@ -19,6 +19,38 @@ body {
 @media screen and (min-width: 667px) {
   body {
     width: auto;
+    height: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 667px) {
+  main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 65%;
+    margin: auto;
+    height: auto;
+  }
+}
+
+@media screen and (min-width: 667px) {
+  article {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -80,6 +112,13 @@ h2 {
           justify-content: center;
 }
 
+@media screen and (min-width: 667px) {
+  .button_commander {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -103,7 +142,7 @@ header {
         -ms-flex-pack: start;
             justify-content: flex-start;
     padding-left: 3rem;
-    height: auto;
+    height: 3.5rem;
   }
 }
 
@@ -117,6 +156,7 @@ header > .gps {
     display: -ms-flexbox;
     display: flex;
     margin-left: 3rem;
+    height: 100%;
   }
 }
 
@@ -222,7 +262,8 @@ footer a {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    width: auto;
+    width: 75%;
+    height: auto;
     margin-right: 1rem;
   }
 }
@@ -310,6 +351,7 @@ footer nav {
 @media screen and (min-width: 667px) {
   .section_accueil_1 {
     height: 22rem;
+    width: 100%;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
@@ -647,9 +689,8 @@ button a {
   opacity: 100%;
 }
 
-.coeur_accueil h3:nth-child(1):active + .coeur_fond {
+.coeur_accueil h3:nth-child(1):active + h3:nth-child(2) {
   opacity: 0%;
-  border: 2px solid blue;
 }
 
 .coeur_accueil h3:nth-child(2) {
@@ -795,6 +836,14 @@ button a {
   cursor: pointer;
 }
 
+@media screen and (min-width: 667px) {
+  .fa-arrow-left {
+    position: relative;
+    margin-right: 0rem;
+    right: 1.5rem;
+  }
+}
+
 header a {
   color: black;
 }
@@ -809,32 +858,55 @@ header a {
   overflow: hidden;
 }
 
+@media screen and (min-width: 667px) {
+  .fond {
+    height: 100%;
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .img_fond {
-  width: 100%;
-  height: 100%;
   overflow: hidden;
+}
+
+@media screen and (min-width: 667px) {
+  .img_fond {
+    min-width: 369px;
+    min-height: 246px;
+    width: 100%;
+    height: 75%;
+  }
 }
 
 .titre {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 20rem;
   margin-left: 1rem;
   margin-right: 1rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media screen and (min-width: 667px) {
+  .titre {
+    width: 80%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 
 .titre h3 {
   font-size: 35px;
   color: black;
-  position: relative;
-  top: 0.35rem;
 }
 
 .titre h3:hover {
@@ -845,6 +917,15 @@ header a {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.coeur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .titre h3 .fa-heart {
@@ -895,6 +976,19 @@ header a {
   bottom: 3rem;
 }
 
+@media screen and (min-width: 667px) {
+  .carte {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: auto;
+    height: auto;
+  }
+}
+
 .plat_cache {
   border-radius: 20px 20px 20px 20px;
   overflow: hidden;
@@ -903,6 +997,12 @@ header a {
   margin-bottom: 1rem;
   -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
           box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.05);
+}
+
+@media screen and (min-width: 667px) {
+  .plat_cache {
+    width: 19.25rem;
+  }
 }
 
 .plat {

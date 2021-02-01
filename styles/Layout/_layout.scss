@@ -9,13 +9,14 @@ header {
     @include mobile-only {
         justify-content: flex-start;
         padding-left: 3rem;
-        height: auto;
+        height: 3.5rem;
     }
     & > .gps {
         display: none;
         @include mobile-only {
             display: flex;
             margin-left: 3rem;
+            height: 100%;
         }
     }
 }  
@@ -76,7 +77,8 @@ footer a {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: auto; 
+        width: 75%; 
+        height: auto;
         margin-right: 1rem;
     }
 }

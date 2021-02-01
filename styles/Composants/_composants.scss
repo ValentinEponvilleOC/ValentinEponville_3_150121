@@ -27,5 +27,9 @@
 .button_commander {
     display: flex;
     justify-content: center;
+    @include mobile-only {
+        flex-wrap: wrap;
+        //padding-left: 50%;
+    }
 }
 
