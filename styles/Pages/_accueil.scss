@@ -40,7 +40,7 @@
 }
 
 .animation {
-    border: 6px solid blue;
+    //border: 6px solid blue;
     //height: 41rem;
     //height: 667px;
     height: 100%;
@@ -59,7 +59,7 @@
     }
     //animation-duration: 1250ms;
     & > .icônes_loader {
-        border: 3px solid green;
+        //border: 3px solid green;
         width: 50%;
         //height: fit-content;
         opacity: 100%;
@@ -73,17 +73,23 @@
         }
         & > img {
             z-index: 1001;
+            transform: scale(2);
             //opacity: 50%;
+            @include mobile-only {
+                transform: scale(1);
+            }
         }
         & > .bloc {
             display: flex;
             flex-direction: column;
-            border: 2px solid black;
+            //border: 2px solid black;
             width: 90%;
             height: 40%;
             position: absolute;
             z-index: 1000;
+            transform: scale(2);
             @include mobile-only {
+                transform: scale(1);
             }
         }  
     }
@@ -153,6 +159,7 @@
     text-align: center;
     background-color: $lightgrey;
     height: 22rem;
+    z-index: 1000;
     @include mobile-only {
         height: 22rem;
         width: 100%;

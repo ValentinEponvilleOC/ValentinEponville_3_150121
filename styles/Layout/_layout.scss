@@ -6,6 +6,9 @@ header {
     box-shadow: 0rem 1px 5px 0px rgba(41, 41, 41, 0.5);
     overflow: hidden;
     width: auto;
+    z-index: 999;
+    position: relative;
+    //border: 3px solid purple;
     @include mobile-only {
         justify-content: center;
         padding-left: 3rem;

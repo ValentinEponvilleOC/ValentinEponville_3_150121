@@ -71,7 +71,7 @@
 .fond {
     width: auto;
     height: 15rem;
-    border: 3px solid green;
+    //border: 3px solid green;
     z-index: 1;
     display: flex;
     //justify-content: center;
@@ -98,7 +98,7 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
-    border: 3px solid red;
+    //border: 3px solid red;
     @include mobile-only {
         //max-height: 75%;
         //max-width: 75%;
@@ -123,7 +123,7 @@
         justify-content: space-between;
         display: flex;
         align-items: center;
-        border: 2px solid blue;
+        //border: 2px solid blue;
         //position: relative;
         //bottom: 2.5rem;
         right: 2rem;
@@ -234,7 +234,7 @@
 }
 
 .type_repas {
-    border: 2px solid orange;
+    //border: 2px solid orange;
     position: relative;
     bottom: 1rem;
     margin-left: 1rem;
@@ -270,7 +270,7 @@
 
 .carte article:first-of-type .plat_cache {
     border-radius: 20px 20px 20px 20px;
-    border: 2px solid blue;
+    //border: 2px solid blue;
     overflow: hidden;
     width: auto;
     height: auto;
@@ -291,7 +291,7 @@
 
 .carte article:nth-child(3) .plat_cache {
     border-radius: 20px 20px 20px 20px;
-    border: 2px solid blue;
+    //border: 2px solid blue;
     overflow: hidden;
     width: auto;
     height: auto;
@@ -312,7 +312,7 @@
 
 .carte article:nth-child(4) .plat_cache {
     border-radius: 20px 20px 20px 20px;
-    border: 2px solid blue;
+    //border: 2px solid blue;
     overflow: hidden;
     width: auto;
     height: auto;
@@ -334,7 +334,7 @@
 .plat {
     background-color: white;
     border-radius: 20px 20px 20px 20px;
-    border: 1px solid red;
+    //border: 1px solid red;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -389,12 +389,12 @@
             cursor: pointer;
         }
         &:hover > &__des {
-            flex: 0.1 0 auto;
+            flex: 0.2 0 auto;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
             @include mobile-only {
-                flex: 0.15 0 auto;
+                flex: 0.17 0 auto;
             } 
         }
         /*&:hover > &__prixetanim {

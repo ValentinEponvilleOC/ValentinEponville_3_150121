@@ -10,7 +10,7 @@ body {
     justify-content: stretch;
     align-items: center;
     //border: 2px solid brown;
-    //z-index: 1003;
+    z-index: 1000;
     //animation: body 0ms 1250ms backwards;
     @include mobile-only {
         //border: 5px solid greenyellow;

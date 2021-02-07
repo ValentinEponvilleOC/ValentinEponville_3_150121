@@ -23,6 +23,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 1000;
 }
 
 @media screen and (min-width: 667px) {
@@ -144,6 +145,8 @@ header {
           box-shadow: 0rem 1px 5px 0px rgba(41, 41, 41, 0.5);
   overflow: hidden;
   width: auto;
+  z-index: 999;
+  position: relative;
 }
 
 @media screen and (min-width: 667px) {
@@ -420,7 +423,6 @@ footer nav {
 }
 
 .animation {
-  border: 6px solid blue;
   height: 100%;
   width: 100%;
   margin: auto;
@@ -449,7 +451,6 @@ footer nav {
 }
 
 .animation > .icônes_loader {
-  border: 3px solid green;
   width: 50%;
   opacity: 100%;
   position: absolute;
@@ -469,6 +470,15 @@ footer nav {
 
 .animation > .icônes_loader > img {
   z-index: 1001;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+@media screen and (min-width: 667px) {
+  .animation > .icônes_loader > img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .animation > .icônes_loader > .bloc {
@@ -479,11 +489,19 @@ footer nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 2px solid black;
   width: 90%;
   height: 40%;
   position: absolute;
   z-index: 1000;
+  -webkit-transform: scale(2);
+          transform: scale(2);
+}
+
+@media screen and (min-width: 667px) {
+  .animation > .icônes_loader > .bloc {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 
 .bloc__couleur--green {
@@ -555,6 +573,7 @@ footer nav {
   text-align: center;
   background-color: #F6F6F6;
   height: 22rem;
+  z-index: 1000;
 }
 
 @media screen and (min-width: 667px) {
@@ -1136,7 +1155,6 @@ button a {
 .fond {
   width: auto;
   height: 15rem;
-  border: 3px solid green;
   z-index: 1;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1177,7 +1195,6 @@ button a {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  border: 3px solid red;
 }
 
 @media screen and (min-width: 667px) {
@@ -1214,7 +1231,6 @@ button a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    border: 2px solid blue;
     right: 2rem;
     border-radius: 20px 20px 20px 20px;
     padding-left: 2rem;
@@ -1355,7 +1371,6 @@ button a {
 }
 
 .type_repas {
-  border: 2px solid orange;
   position: relative;
   bottom: 1rem;
   margin-left: 1rem;
@@ -1400,7 +1415,6 @@ button a {
 
 .carte article:first-of-type .plat_cache {
   border-radius: 20px 20px 20px 20px;
-  border: 2px solid blue;
   overflow: hidden;
   width: auto;
   height: auto;
@@ -1426,7 +1440,6 @@ button a {
 
 .carte article:nth-child(3) .plat_cache {
   border-radius: 20px 20px 20px 20px;
-  border: 2px solid blue;
   overflow: hidden;
   width: auto;
   height: auto;
@@ -1452,7 +1465,6 @@ button a {
 
 .carte article:nth-child(4) .plat_cache {
   border-radius: 20px 20px 20px 20px;
-  border: 2px solid blue;
   overflow: hidden;
   width: auto;
   height: auto;
@@ -1479,7 +1491,6 @@ button a {
 .plat {
   background-color: white;
   border-radius: 20px 20px 20px 20px;
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1562,9 +1573,9 @@ button a {
 }
 
 .plat:hover > .plat__des {
-  -webkit-box-flex: 0.1;
-      -ms-flex: 0.1 0 auto;
-          flex: 0.1 0 auto;
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2 0 auto;
+          flex: 0.2 0 auto;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1572,9 +1583,9 @@ button a {
 
 @media screen and (min-width: 667px) {
   .plat:hover > .plat__des {
-    -webkit-box-flex: 0.15;
-        -ms-flex: 0.15 0 auto;
-            flex: 0.15 0 auto;
+    -webkit-box-flex: 0.17;
+        -ms-flex: 0.17 0 auto;
+            flex: 0.17 0 auto;
   }
 }
 
