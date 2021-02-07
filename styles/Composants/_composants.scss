@@ -2,10 +2,12 @@
     background: linear-gradient(-10deg, $primaire, $secondaire);
     border-radius: 40px 40px 40px 40px;
     border: none;
-    width: 65%;
+    width: 100%;
     font-size: 1.1rem;
     color: white;
-    font-family: 'Roboto Medium'; 
+    font-family: 'Roboto Medium';
+    padding-left: 1rem;
+    padding-right: 1rem; 
     @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.15));  
     &--commander {
         height: 3rem;
@@ -32,4 +34,6 @@
         //padding-left: 50%;
     }
 }
+
+
 

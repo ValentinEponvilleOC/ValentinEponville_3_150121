@@ -2,20 +2,21 @@ body {
     width: 375px;
     height: auto;
     margin: auto;
+    //position: absolute;
     //padding: auto;
     font-family: 'Roboto', sans-serif;
-    display: flex;
+    //display: flex;
     flex-direction: column;
     justify-content: stretch;
-    //border: 2px solid red;
+    align-items: center;
+    //border: 2px solid brown;
+    //z-index: 1003;
+    //animation: body 0ms 1250ms backwards;
     @include mobile-only {
-        //height: auto;
-        //width: auto;
         //border: 5px solid greenyellow;
         width: auto;
-        height: auto;
-        display: flex;
-        justify-content: center;
+        justify-content: stretch;
+        align-items: center;
     }
 }
 
