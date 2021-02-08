@@ -53,7 +53,7 @@
     position: fixed;
     z-index: 1000;
     background-color: white;
-    animation: loader_durée 0ms forwards;
+    animation: loader_durée 1750ms forwards;
     @include mobile-only {
         align-items: center;
     }

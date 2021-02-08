@@ -445,8 +445,8 @@ footer nav {
   position: fixed;
   z-index: 1000;
   background-color: white;
-  -webkit-animation: loader_durée 0ms forwards;
-          animation: loader_durée 0ms forwards;
+  -webkit-animation: loader_durée 1750ms forwards;
+          animation: loader_durée 1750ms forwards;
 }
 
 @media screen and (min-width: 667px) {
