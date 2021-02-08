@@ -6,8 +6,9 @@
     font-size: 1.1rem;
     color: white;
     font-family: 'Roboto Medium';
-    padding-left: 1rem;
-    padding-right: 1rem; 
+    padding-left: 1.25rem;
+    padding-right: 1.25rem; 
+    height: 3rem;
     @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.15));  
     &--commander {
         height: 3rem;
@@ -21,7 +22,7 @@
     }
     @include mobile-only {
         height: 6rem;
-        width: 30rem;
+        width: 25rem;
         font-size: 1.75rem;
     } 
 }
@@ -29,6 +30,7 @@
 .button_commander {
     display: flex;
     justify-content: center;
+    width: 55%;
     @include mobile-only {
         flex-wrap: wrap;
         //padding-left: 50%;

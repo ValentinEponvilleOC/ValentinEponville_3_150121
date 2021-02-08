@@ -41,14 +41,19 @@ article {
     }
 }
 
-h1 {
+h2 {
     font-size: 1.5rem;
     @include mobile-only {
         font-size: 2rem;
     }
 }
 
-h2 {
+h3 {
+    font-size: 1rem;
+    font-family: 'Roboto Medium';
+}
+
+h4 {
     font-size: 1rem;
     font-family: 'Roboto Medium';
 }

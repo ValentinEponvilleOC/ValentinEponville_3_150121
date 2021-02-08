@@ -53,7 +53,7 @@
     position: fixed;
     z-index: 1000;
     background-color: white;
-    animation: loader_durée 1750ms forwards;
+    animation: loader_durée 0ms forwards;
     @include mobile-only {
         align-items: center;
     }
@@ -140,6 +140,7 @@
     align-items: center;
     background-color: #EAEAEA;
     width: 375px;
+    //border: 3px solid turquoise;
     @include mobile-only {
         display: none;
     }
@@ -151,6 +152,29 @@
     right: 0.75rem;
 }
 
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //height: 100%;
+    & > h2 {
+        display: flex;
+        //border: 2px solid red;
+        //background: $lightgrey;
+        text-align: center;
+        width: 17rem;
+        //padding-top: 2rem;
+        //padding-bottom: 2rem;
+        position: absolute;
+        top: 7rem;
+        @include mobile-only {
+            top: 3.5rem;
+            width: 23rem;
+            justify-content: center;
+        }
+    }
+}
+
 .section_accueil_1 {
     //border: 2px solid green;
     display: flex;
@@ -158,28 +182,21 @@
     align-items: center;
     text-align: center;
     background-color: $lightgrey;
-    height: 22rem;
+    height: auto;
     z-index: 1000;
+    padding-bottom: 4rem;
+    padding-top: 6rem;
     @include mobile-only {
-        height: 22rem;
+        height: auto;
         width: 100%;
         justify-content: space-between;
         align-items: center;
         //padding-top: 2rem;
-        padding-bottom: 5rem;
+        padding-bottom: 3rem;
     }
 }
 
-.section_accueil_1 h1 {
-    //border: 2px solid red;
-    width: 75%;
-    @include mobile-only {
-        padding-top: 2rem;
-        width: auto;
-    }
-}
-
-.section_accueil_1 p:nth-child(3) {
+.section_accueil_1 p:nth-child(1) {
     //border: 2px solid red;
     font-size: 1.1rem;
     color:rgba(41, 41, 41, 0.75);
@@ -209,7 +226,7 @@ button a {
         padding: 0rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        & > h1 {
+        & > h2 {
             //border: 2px solid red;
             padding-right: 80%;
             overflow: hidden;
@@ -228,6 +245,7 @@ button a {
     margin: 1rem;
     border-radius: 25px 25px 25px 25px;
     height: 4rem;
+    width: 100%;
     @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.15));
         &:hover {
         cursor: pointer;
@@ -290,7 +308,7 @@ button a {
         justify-content: space-between;
         width: fit-content;
         height: 100%;
-        & > h1 {
+        & > h2 {
             padding-right: 100%;
             overflow: hidden;
             //border: 2px solid red;

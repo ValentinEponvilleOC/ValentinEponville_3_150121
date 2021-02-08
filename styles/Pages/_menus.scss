@@ -1,46 +1,9 @@
-@keyframes validation {
-    0% {
-        transform: scale(1);
-        transform: position relative;
-        left: 0%;
-    }
-    100% {
-        transform: scale(1);
-        transform: position relative;
-        left: 20%;
-    }
-}
-
-@keyframes validation_retour {
-    0% {
-        transform: scale(1);
-        transform: position relative;
-        left: 20%;
-    }
-    100% {
-        transform: scale(1);
-        transform: position relative;
-        left: 0%;
-    }
-}
-
 @keyframes logo_v {
     0% {
         transform: rotate(0deg) scale(1.25);
     }
     100% {
         transform: rotate(360deg) scale(1.25);
-    }
-}
-
-@keyframes flexing {
-    0% {
-        transform: scale(1);
-        transform: flex
-    }
-    100% {
-        transform: scale(1);
-        transform: flex;
     }
 }
 
@@ -134,7 +97,7 @@
     }
 }
 
-.titre > h1  {
+.titre > h2  {
     font-family: 'Shrikhand', cursive;
     font-size: 1.5rem;
     @include mobile-only {
@@ -160,7 +123,7 @@
         width: auto;
         height: auto;
         //border: 2px solid purple;
-        & > .coeur_img {
+        & > img {
             cursor: pointer;
             display: flex;
             //position: absolute;
@@ -198,14 +161,12 @@
     opacity: 0%;
 }
 
-.type_repas > h2 {
+.type_repas > h3 {
     text-transform: uppercase;
     font-family: 'Roboto Thin';
     border-bottom: 3px solid $tertiaire;
     width: 33px;
     height: 7%;
-    @include mobile-only { 
-    }
 }
 
 .carte {
@@ -219,7 +180,7 @@
     //flex: auto;
     flex-direction: column;
     justify-content: center;
-    padding: 1rem;
+    //padding: 1rem;
     margin-bottom: -3rem;
     position: relative;
     bottom: 3rem;
@@ -240,7 +201,7 @@
     margin-left: 1rem;
     margin-right: 1rem;
     margin-top: 2rem;
-    & > h2 {
+    & > h3 {
         @include mobile-only {
             margin-right: 80%;
         }
@@ -251,26 +212,11 @@
         flex-wrap:wrap;
         height: auto;
     }
-    /*& :nth-of-type(1) {
-        border-radius: 20px 20px 20px 20px;
-        border: 2px solid blue;
-        overflow: hidden;
-        width: auto;
-        height: auto;
-        margin-bottom: 1rem;
-        animation: apparition_fondu 1000ms backwards;
-        animation-play-state: running;
-        animation-delay: 500ms;
-        @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.05));
-        @include mobile-only {
-        width: 19.25rem;
-        }
-    }*/
 }
 
 .carte article:first-of-type .plat_cache {
     border-radius: 20px 20px 20px 20px;
-    //border: 2px solid blue;
+    border: 2px solid blue;
     overflow: hidden;
     width: auto;
     height: auto;
@@ -334,7 +280,7 @@
 .plat {
     background-color: white;
     border-radius: 20px 20px 20px 20px;
-    //border: 1px solid red;
+    border: 1px solid red;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -358,6 +304,9 @@
         font-size: 0.85rem;
         //border: 2px solid blue;
         transition-duration: 500ms;
+        @include mobile-only {
+            flex: 1 0 auto; 
+        }
         }
         &__prix {
         //flex: auto;
@@ -372,7 +321,7 @@
             width: 3.5rem;
             height: 4.5rem;
             position: relative;
-            left: 11%; /* remettre à 50% */
+            left: 50%; /* remettre à 50% */
             background-color: $tertiaire;
             margin-left: 0.5rem;
             display: flex;
@@ -380,6 +329,10 @@
             align-items: center;
             overflow: hidden;
             //border: 2px solid brown;
+            @include mobile-only {
+                left: 11%;
+                margin-left: 0.5rem;
+            }
                 & > .fa-check-circle {
                     transform: scale(1.25);                  
                     color: rgba($color: white, $alpha: 1.0);
@@ -388,8 +341,8 @@
         &:hover {
             cursor: pointer;
         }
-        &:hover > &__des {
-            flex: 0.2 0 auto;
+        &:hover > &__des { // animation de validation de commande
+            flex: 0.1 0 auto;
             white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
@@ -423,7 +376,7 @@
     /*transition-property: position relative;*/
 }
 
-.plat__des h3 { 
+.plat__des h4 { 
     /*position: relative;
     bottom: 0.25rem;*/
     display: inline;
