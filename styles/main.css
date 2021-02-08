@@ -445,8 +445,8 @@ footer nav {
   position: fixed;
   z-index: 1000;
   background-color: white;
-  -webkit-animation: loader_durée 1750ms forwards;
-          animation: loader_durée 1750ms forwards;
+  -webkit-animation: loader_durée 1750ms both;
+          animation: loader_durée 1750ms both;
 }
 
 @media screen and (min-width: 667px) {
@@ -1333,7 +1333,6 @@ button a {
 
 .carte article:first-of-type .plat_cache {
   border-radius: 20px 20px 20px 20px;
-  border: 2px solid blue;
   overflow: hidden;
   width: auto;
   height: auto;
@@ -1410,7 +1409,6 @@ button a {
 .plat {
   background-color: white;
   border-radius: 20px 20px 20px 20px;
-  border: 1px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
