@@ -35,25 +35,29 @@
     width: auto;
     height: 15rem;
     //border: 3px solid green;
-    z-index: 1;
+    z-index: 999;
     display: flex;
     //justify-content: center;
     align-items: center;
     overflow: hidden;
-    margin-block-start: 0em;
+    position: relative;
+    /*margin-block-start: 0em;
     margin-block-end: 0em;
     margin-inline-start: 0px;
-    margin-inline-end: 0px;
+    margin-inline-end: 0px;*/
     @include mobile-only {
         height: 100%;
         width: 90%;
+        margin: 0%;
         //min-width: 369px;
         //min-height: 246px;
         justify-content: center;
-        margin-block-start: 0em;
+        position: relative;
+        //bottom: 2rem;
+        /*margin-block-start: 0em;
         margin-block-end: 0em;
         margin-inline-start: 0px;
-        margin-inline-end: 0px;
+        margin-inline-end: 0px;*/
     }
 }
 
@@ -61,6 +65,8 @@
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: relative;
+    z-index: 999;
     //border: 3px solid red;
     @include mobile-only {
         //max-height: 75%;
@@ -181,9 +187,9 @@
     flex-direction: column;
     justify-content: center;
     //padding: 1rem;
-    margin-bottom: -3rem;
+    //margin-bottom: -3rem;
     position: relative;
-    bottom: 3rem;
+    //bottom: 3rem;
     @include mobile-only {
         flex-direction: row;
         flex-wrap: wrap;
@@ -386,8 +392,9 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-block-start: 0rem;
-    margin-block-end: 0rem;
+    margin: 0%;
+    /*margin-block-start: 0rem;
+    margin-block-end: 0rem;*/
 }
 
 .plat__des p {
@@ -400,8 +407,9 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-block-start: 0rem;
-    margin-block-end: 0rem;
+    margin: 0%;
+    /*margin-block-start: 0rem;
+    margin-block-end: 0rem;*/
 }
 
 
