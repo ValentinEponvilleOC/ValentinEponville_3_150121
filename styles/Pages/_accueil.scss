@@ -203,7 +203,7 @@ section {
     @include mobile-only {
         font-size: 1.5rem;
         width: 30rem;
-        word-wrap: wrap;
+        //word-wrap: wrap;
     }
 }
 
@@ -359,10 +359,11 @@ button a {
             position: relative;
             display: flex;
             bottom: 3rem;
-            margin-block-start: 0em;
+            margin: auto;
+            /*margin-block-start: 0em;
             margin-block-end: 1em;
             margin-inline-start: 0px;
-            margin-inline-end: 0px;
+            margin-inline-end: 0px;*/
             @include mobile-only {
                 width: auto;          
             }

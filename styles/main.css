@@ -641,7 +641,6 @@ section > h2 {
   .section_accueil_1 p:nth-child(1) {
     font-size: 1.5rem;
     width: 30rem;
-    word-wrap: wrap;
   }
 }
 
@@ -872,14 +871,11 @@ button a {
   display: -ms-flexbox;
   display: flex;
   bottom: 3rem;
-  -webkit-margin-before: 0em;
-          margin-block-start: 0em;
-  -webkit-margin-after: 1em;
-          margin-block-end: 1em;
-  -webkit-margin-start: 0px;
-          margin-inline-start: 0px;
-  -webkit-margin-end: 0px;
-          margin-inline-end: 0px;
+  margin: auto;
+  /*margin-block-start: 0em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;*/
 }
 
 @media screen and (min-width: 667px) {
