@@ -10,11 +10,6 @@
     padding-right: 1.25rem; 
     height: 3.5rem;
     @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.15));  
-    &--commander {
-        height: 3rem;
-        margin-top: 2rem;
-        margin-bottom: 4rem;
-    }
     &:hover {
         cursor: pointer;
         @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 1));
@@ -27,15 +22,33 @@
     } 
 }
 
-.button_commander {
-    display: flex;
-    justify-content: center;
-    width: 55%;
-    @include mobile-only {
-        flex-wrap: wrap;
-        //padding-left: 50%;
+.commander {
+    border: 2px solid brown;
+    background: linear-gradient(-10deg, $primaire, $secondaire);
+    border-radius: 40px 40px 40px 40px;
+    width: 50%;
+    font-size: 1.05rem;
+    color: white;
+    font-family: 'Roboto Regular';
+    margin-left: 23.5%;
+    height: 3.5rem;
+    margin-bottom: 2rem;
+    @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.15));  
+    &:hover {
+        cursor: pointer;
+        @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 1));
+        @include fondu_blanc (white, 0.5);
     }
+    @include mobile-only {
+        height: 6rem;
+        width: 60%;
+        max-width: 262px;
+        font-size: 1.75rem;
+        margin-left: 0%;
+    } 
 }
+
+
 
 
 

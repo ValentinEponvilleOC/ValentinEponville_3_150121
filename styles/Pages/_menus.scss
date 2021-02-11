@@ -19,123 +19,155 @@
 }
 
 .fa-arrow-left {
-    //position: relative;
-    //right: 3rem;
+    position: relative;
     &:hover {
         cursor: pointer;
     }
     @include mobile-only {
-        position: relative;
-        //margin-right: 0rem;
-        //right: 1.5rem;
+        transform: scale(1.5);
+        right: 1rem;
     }
 }
 
+.main_menus {
+    display: flex;
+    flex-direction: column;
+    //justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    height: fit-content;
+    background-color: $lightgrey;
+    @include mobile-only {
+        //border: 5px solid purple;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        position: relative;
+        width: 65%;
+        margin: auto;
+        height: auto;
+        z-index: 999;
+        //background-color: white;
+        }
+}
+
 .fond {
+    border: 3px solid green;
     width: auto;
     height: 15rem;
-    //border: 3px solid green;
     z-index: 999;
     display: flex;
     //justify-content: center;
     align-items: center;
     overflow: hidden;
     position: relative;
-    /*margin-block-start: 0em;
-    margin-block-end: 0em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;*/
+    margin: 0%;
     @include mobile-only {
+        background-color: white;
         height: 100%;
-        width: 90%;
+        width: 100%;
         margin: 0%;
         //min-width: 369px;
         //min-height: 246px;
         justify-content: center;
         position: relative;
         //bottom: 2rem;
-        /*margin-block-start: 0em;
-        margin-block-end: 0em;
-        margin-inline-start: 0px;
-        margin-inline-end: 0px;*/
     }
 }
 
 .img_fond {
+    border: 3px solid red;
     width: 100%;
     height: 100%;
     overflow: hidden;
     position: relative;
     z-index: 999;
-    //border: 3px solid red;
     @include mobile-only {
         //max-height: 75%;
         //max-width: 75%;
        //min-width: 369px;
        //min-height: 246px;
-       width: 100%;
+       width: 70%;
        height: 50%;
     }
 }
 
-.titre {
+.liste_menus  {
+    border-radius: 40px 40px 0px 0px;
+    background-color: $lightgrey;
+    height: 100%;
+    width: 100%;
+    z-index: 1000;
     display: flex;
-    align-items: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    //border: 2px solid blue;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    bottom: 2rem;
     @include mobile-only {
-        //padding-right: 70%;
-        width: 100%;
-        height: 100%;
-        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: auto;
+        height: auto;
+        justify-content: center;
+        //bottom: 5rem;
+    }
+    & > h2 {
+        //border: 2px solid blue;
+        font-family: 'Shrikhand', cursive;
+        font-size: 1.5rem;
         display: flex;
         align-items: center;
-        //border: 2px solid blue;
-        //position: relative;
-        //bottom: 2.5rem;
-        right: 2rem;
-        //background-color: $lightgrey;
-        border-radius: 20px 20px 20px 20px;
-        padding-left: 2rem;
-
-    }
-}
-
-.titre > h2  {
-    font-family: 'Shrikhand', cursive;
-    font-size: 1.5rem;
-    @include mobile-only {
+        margin-left: 1rem;
+        position: relative;
+        top: 1rem;
+        justify-content: space-between;
+        @include mobile-only {
+            //border: 2px solid blue;
+            font-size: 1.5rem;
+            width: 80%;
+            height: 100%;
+            justify-content: space-between;
+            display: flex;
+            align-items: center;
+            right: 2rem;
+            border-radius: 20px 20px 20px 20px;
+            padding-left: 2rem;
+            }
+        @include large-screen {
+            font-size: 2rem;
+        }    
     }
 }
 
 .coeur_menus {
+    //border: 2px solid orangered;
     width : 4rem;
     height: 4rem;
-    //border: 2px solid orangered;
-    position: relative;
-    //bottom: 0.5rem;
+    position: absolute;
+    right: 0rem; top: 1.5rem;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     z-index: 5;
+    @include mobile-only {
+        right: 2rem;
+        transform: scale(1.5);
+    }
     & > figure {
         display: flex;
         position: absolute;
         overflow: hidden;
-        //top: 0.15rem;
         width: auto;
         height: auto;
         //border: 2px solid purple;
         & > img {
             cursor: pointer;
             display: flex;
-            //position: absolute;
             z-index: 1;
             overflow: hidden;
-            //top: 0.15rem;
             width: 3rem;
             height: 3rem;
             //border: 2px solid green;
@@ -147,7 +179,6 @@
         cursor: pointer;
         width: 39%;
         height: 40%;
-        //position: absolute;
         top:1.25rem;
         //border: 2px solid green;
         display: flex;
@@ -175,31 +206,6 @@
     height: 7%;
 }
 
-.carte {
-    //border: 2px solid blue;  
-    border-radius: 40px 40px 0px 0px;
-    background-color: $lightgrey;
-    height: auto;
-    width: auto;
-    z-index: 3;
-    display: flex;
-    //flex: auto;
-    flex-direction: column;
-    justify-content: center;
-    //padding: 1rem;
-    //margin-bottom: -3rem;
-    position: relative;
-    //bottom: 3rem;
-    @include mobile-only {
-        flex-direction: row;
-        flex-wrap: wrap;
-        width: auto;
-        height: auto;
-        justify-content: center;
-        //bottom: 5rem;
-    }
-}
-
 .type_repas {
     //border: 2px solid orange;
     position: relative;
@@ -214,72 +220,37 @@
     }
     @include mobile-only {
         display:flex;
+        justify-content:center;
+        flex-wrap:wrap;
+        height: auto;
+    }
+    @include large-screen {
+        display:flex;
         justify-content:space-between;
         flex-wrap:wrap;
         height: auto;
     }
 }
 
-.carte article:first-of-type .plat_cache {
-    border-radius: 20px 20px 20px 20px;
+article section:nth-child(3) .plat_cache {
     //border: 2px solid blue;
-    overflow: hidden;
-    width: auto;
-    height: auto;
-    margin-bottom: 1rem;
-    //position: relative;
-    //transform: translateY(1rem);
-    animation: apparition_fondu 1000ms backwards;
-    animation-play-state: running;
-    animation-delay: 500ms;
-    @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.05));
-    @include mobile-only {
-        width: 19.25rem;
-        height: 4rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
+    @include fondu_et_delay;
 }
 
-.carte article:nth-child(3) .plat_cache {
-    border-radius: 20px 20px 20px 20px;
-    //border: 2px solid blue;
-    overflow: hidden;
-    width: auto;
-    height: auto;
-    margin-bottom: 1rem;
-    //position: relative;
-    //transform: translateY(1rem);
-    animation: apparition_fondu 1000ms backwards;
-    animation-play-state: running;
+article section:nth-child(4) .plat_cache {
+    @include fondu_et_delay;
     animation-delay: 1000ms;
-    @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.05));
-    @include mobile-only {
-        width: 19.25rem;
-        height: 4rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-    }
 }
 
-.carte article:nth-child(4) .plat_cache {
-    border-radius: 20px 20px 20px 20px;
-    //border: 2px solid blue;
-    overflow: hidden;
-    width: auto;
-    height: auto;
-    margin-bottom: 1rem;
-    //position: relative;
-    //transform: translateY(1rem);
-    animation: apparition_fondu 1000ms backwards;
-    animation-play-state: running;
+article section:nth-child(5) .plat_cache {
+    @include fondu_et_delay;
     animation-delay: 1500ms;
-    @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.05));
+}
+
+.plat_cache {
+    margin: 0rem;
     @include mobile-only {
-        width: 19.25rem;
-        height: 4rem;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
+        margin: 1rem;
     }
 }
 
@@ -296,9 +267,7 @@
     overflow: hidden;
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     @include mobile-only {
-    }
-    //position: relative;
-    
+    } 
         &__des {
         width: 10rem;
         height: auto;
@@ -356,12 +325,6 @@
                 flex: 0.17 0 auto;
             } 
         }
-        /*&:hover > &__prixetanim {
-            animation: validation 500ms both;
-        }
-        &:not(:hover) > &__prixetanim {
-            animation: validation_retour 750ms both;
-        }*/
         &:hover > &__prixetanim > &__anim > .fa-check-circle {
             animation: logo_v 500ms both;
             animation-timing-function: linear;

@@ -48,7 +48,7 @@
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 1000;
+    z-index: 1020;
     background-color: white;
     animation: loader_durée 0ms both; // 1750 ms
     @include mobile-only {
@@ -146,26 +146,45 @@
     right: 0.75rem;
 }
 
-.intro {
-    background-color: $lightgrey;
+.main_accueil {
+    display: flex;
+    flex-direction: column;
+    //justify-content: flex-start;
+    align-items: center;
+    @include mobile-only {
+    //border: 5px solid purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    width: 65%;
+    margin: auto;
+    height: auto;
+    z-index: 999;
+    }
 }
 
-article {
+.intro {
+    background-color: $lightgrey;
     display: flex;
     flex-direction: column;
     align-items: center;
     & > h2 {
-        //border: 2px solid red;
+        display: flex;
+        //flex-direction: column;
+        align-items: center;
+        border: 2px solid red;
         display: flex;
         text-align: center;
         width: 17rem;
         position: relative;
         top: 1rem;
         @include mobile-only {
-            top: 3.5rem;
-            width: 23rem;
+            width: 73%;
             justify-content: center;
-        }
+            transform: scale(1.25);
+            }
     }
 }
 
@@ -199,43 +218,64 @@ article {
 }
 
 .fonctionnement {
-    //border: 2px solid blue;
+    border: 2px solid red;
     padding: 1rem;
     height: auto;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-right: 1rem;
+    //margin-right: 1rem;
     @include mobile-only {
+        align-items: center;
+    }
+    @include large-screen {
         flex-direction: row;
         display: flex;
-        width: 100%;
+        width: 120%;
         flex-wrap: wrap;
         justify-content: space-between;
         margin-bottom: 2rem;
         padding: 0rem;
         padding-top: 1rem;
         padding-bottom: 1rem;
-        & > h2 {
-            //border: 2px solid red;
-            padding-right: 80%;
-            overflow: hidden;
-            position: relative;
-            left: 1rem;
+    }
+    & > h2 {
+        border: 2px solid purple;
+        overflow: hidden;
+        position: relative;
+        @include mobile-only {
+            padding-right: 0%;
+            padding-left: 0%;
+            display: flex;
+            justify-content: center;
+            left: 0rem;
+            margin-bottom: 2rem;
+        }
+        @include large-screen {
+            padding-right: 50%;
+            padding-left: 50%;
+            display: flex;
+            justify-content: center;
+            left: 0rem;
+            transform: scale(1.25);
         }
     }
 }
 
+
 .étapes { // zone fonctionnement
+    border: 2px solid blue;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    text-align: left;
+    //text-align: left;
     background-color: $lightgrey;
     margin: 1rem;
     border-radius: 25px 25px 25px 25px;
     height: 4rem;
     width: 100%;
+    position: relative;
+    right: 0.85rem;
     @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.15));
         &:hover {
         cursor: pointer;
@@ -245,8 +285,18 @@ article {
         }
     }
     @include mobile-only {
+        right: 0rem;
         width: 20rem;
         justify-content: center;
+        transform:scale(1.25);
+        padding:auto;
+    }
+    @include large-screen {
+        width: 20%;
+        right: 0rem;
+        justify-content: center;
+        transform:scale(1.5);
+        padding:auto;
     }
 }
 
@@ -257,7 +307,7 @@ article {
     padding-right: 1rem;
     font-family: 'Roboto Regular';
     @include mobile-only {
-        padding-right: 0rem;
+        padding-right: 1rem;
     }
 }
 
@@ -287,7 +337,7 @@ article {
 }
 
 .restaurants { // zone Restaurants
-    //border: 2px solid blue;
+    border: 2px solid blue;
     padding: 1rem;
     height: auto;
     padding-bottom: 3rem;
@@ -300,12 +350,27 @@ article {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
-        width: fit-content;
-        height: 100%;
-        & > h2 {
-            //border: 2px solid red;
-            padding-right: 100%;
-            overflow: hidden;
+        position: relative;
+        //bottom: 2rem;
+    }
+    @include large-screen {
+    }
+    & > h2 {
+        //border: 2px solid red;
+        margin-bottom: 3rem;
+        @include mobile-only {
+        border: 2px solid red;
+        padding-right: 100%;
+        overflow: hidden;
+        position: relative;
+        left: 3%;
+        bottom: 1rem;
+        margin-bottom: 0rem;
+        }
+        @include large-screen {
+        transform: scale(1.25);
+        left: 15%;
+        padding-right: 100%;
         }
     }
 }
@@ -315,11 +380,11 @@ article {
     text-decoration: none;
     color: black;
     display: flex;
-    height: auto;
+    height: 16rem;
     flex-direction: column;
     align-items: flex-end;
-    flex-wrap: wrap;
-    z-index: 0;
+    //flex-wrap: wrap;
+    z-index: 1014;
     @include mobile-only {
         margin: auto;
         width: auto;
@@ -328,68 +393,74 @@ article {
 }
 
 .vignette {
-    //border: 1px solid red;
+    border: 1px solid red;
     transform: scale(1);
     margin-bottom: 1rem;
     border-radius: 20px 20px 20px 20px;
     width: auto;
     height: 16rem;
+    width: 100%;
+    height: 20%;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     justify-content: flex-start;
     align-items: center;
     background-color: white;
+    z-index: 1014;
     @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.15));
     @include mobile-only {
         margin: auto;
         margin-top: 5%;
         margin-bottom: 5%;
-        flex-wrap: wrap;
+        width: 339px;
+        height: 258px;
     }
-        & figure {
-            width: 100%;
-            height: 14rem;
-            position: relative;
-            display: flex;
-            bottom: 3rem;
-            margin: auto;
-            @include mobile-only {
-                width: auto;          
-            }
+    @include large-screen {
+        //transform: scale(1.25);
+        margin: unset;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    &__img {
+        border: 2px solid green;
+        width: 100%;
+        height: 14rem;
+        position: relative;
+        display: flex;
+        bottom: 3rem;
+        margin: 0%;
+        @include mobile-only {
+            width: auto;          
         }
-        &__img {
+        & > img {
             width: 100%;
-            height: 14rem;
-            display: flex;
-            @include mobile-only {
-                width: auto;          
-            }
         }
-        &__étiquette {
-            width: 5rem;
-            height: 2rem;
-            font-size: 0.95rem;
-            font-family: 'Roboto Medium';
-            color: darken($color: $tertiaire, $amount: 35);
-            background-color: $tertiaire;
-            position: absolute; 
-            margin-right: 1rem;
-            margin-top: 1rem;
-            z-index: 3;        
-            display: flex;
-            align-items: center;
-            justify-content: center;          
-        }
-        &__des {
-            //border: 2px solid blue;
-            display: flex;
-            align-items: flex-start;
-            width: 100%;
-            height: auto;
-            position: relative;
-            bottom: 2.5rem;
-        }     
+    }
+    &__étiquette {
+        width: 5rem;
+        height: 2rem;
+        font-size: 0.95rem;
+        font-family: 'Roboto Medium';
+        color: darken($color: $tertiaire, $amount: 35);
+        background-color: $tertiaire;
+        position: absolute; 
+        margin-right: 1rem;
+        margin-top: 1rem;
+        z-index: 1015;        
+        display: flex;
+        align-items: center;
+        justify-content: center;          
+    }
+    &__des {
+        border: 2px solid blue;
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        height: auto;
+        position: relative;
+        bottom: 2.5rem;
+    }     
 }
 
 .nom_et_menu { 
@@ -402,43 +473,30 @@ article {
 
 .coeur_accueil {
     //border: 2px solid orangered;
-    width : 5rem;
-    height: 4.5rem;
-    position: relative;
+    cursor: pointer;
+    transform: scale(1);
+    position: absolute;
+    right: -0.40rem;
     bottom: 0.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    z-index: 5;
-    & figure {
-        //border: 2px solid blue;
-        display: flex;
-        position: relative;
-        overflow: hidden;
-        top: 0.15rem;
-        width: 3rem;
-        height: 3rem;
-        & > .coeur {
-            //border: 2px solid green;
-            display: flex;
-            position: absolute;
-            z-index: 1;
-            overflow: hidden;
-            width: 3rem;
-            height: 3rem;
-            transform: scale(0.65);
-            }
+    width: 2rem;
+    height: 2rem;
+    //bottom: 10rem;
+    z-index: 1015;
+    & > img {
+        z-index: 1015;
+        position: absolute;
     }
     &:hover .bloc_couleur {
         //border: 2px solid green;
+        width: 90%;
+        height: 90%;
         @include couleur_coeur;
-        width: 38%;
-        height: 35%;
+        width: 90%;
+        height: 90%;
         position: absolute;
-        top:1.25rem;
+        top: -0rem;
         display: flex;
-        z-index: 0;
+        z-index: 1014;
         transform:translateY(-1rem);
         transition: transform 1000ms;
         transform: scaleY(0.95);

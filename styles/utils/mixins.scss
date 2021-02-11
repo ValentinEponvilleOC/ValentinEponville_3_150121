@@ -19,24 +19,35 @@
     background: linear-gradient(-90deg, $primaire, $secondaire);
     background: -moz-linear-gradient(-90deg, $primaire, $secondaire); 
     background: -webkit-linear-gradient(-90deg, $primaire, $secondaire);
-    /*-webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color:transparent;*/
 }
-
-/*@mixin couleur_coeur_2 ($background) {
-    background: $background;
-    background: -moz-linear-gradient; 
-    background: -webkit-linear-gradient;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color:transparent;
-}*/
 
 @mixin mobile-only {
     @media screen and (min-width: map-get($breakpoints, mobile)){
         @content;
+    }
+}
+
+@mixin large-screen {
+    @media screen and (min-width: map-get($breakpoints, large-screen)){
+        @content;
+    }
+}
+
+@mixin fondu_et_delay {
+    //border: 2px solid blue;
+    border-radius: 20px 20px 20px 20px;
+    overflow: hidden;
+    width: auto;
+    height: auto;
+    margin-bottom: 1rem;
+    animation: apparition_fondu 1000ms backwards;
+    animation-play-state: running;
+    animation-delay: 500ms;
+    @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.05));
+    @include mobile-only {
+        width: 19.25rem;
+        height: 4rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 }
