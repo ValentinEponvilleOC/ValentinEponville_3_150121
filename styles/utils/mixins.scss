@@ -17,8 +17,6 @@
 
 @mixin couleur_coeur {
     background: linear-gradient(-90deg, $primaire, $secondaire);
-    background: -moz-linear-gradient(-90deg, $primaire, $secondaire); 
-    background: -webkit-linear-gradient(-90deg, $primaire, $secondaire);
 }
 
 @mixin mobile-only {

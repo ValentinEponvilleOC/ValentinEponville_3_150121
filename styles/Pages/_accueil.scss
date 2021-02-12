@@ -289,14 +289,14 @@
         width: 20rem;
         justify-content: center;
         transform:scale(1.25);
-        padding:auto;
+        padding: 0rem;
     }
     @include large-screen {
         width: 20%;
         right: 0rem;
         justify-content: center;
         transform:scale(1.5);
-        padding:auto;
+        padding: 0rem;
     }
 }
 
@@ -305,7 +305,7 @@
     height: auto;
     font-size: 1rem;
     padding-right: 1rem;
-    font-family: 'robotoregular';
+    font-family: 'robotomedium';
     @include mobile-only {
         padding-right: 1rem;
     }

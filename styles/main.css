@@ -151,7 +151,7 @@ header {
   justify-content: center;
   align-items: center;
   height: 3.5rem;
-  box-shadow: 0rem 1px 5px 0px rgba(41, 41, 41, 0.5);
+  box-shadow: 0px 5px 1px 0px rgba(41, 41, 41, 0.25);
   overflow: hidden;
   width: auto;
   z-index: 1002;
@@ -618,7 +618,7 @@ footer nav {
     width: 20rem;
     justify-content: center;
     transform: scale(1.25);
-    padding: auto;
+    padding: 0rem;
   }
 }
 
@@ -628,7 +628,7 @@ footer nav {
     right: 0rem;
     justify-content: center;
     transform: scale(1.5);
-    padding: auto;
+    padding: 0rem;
   }
 }
 
@@ -636,7 +636,7 @@ footer nav {
   height: auto;
   font-size: 1rem;
   padding-right: 1rem;
-  font-family: 'robotoregular';
+  font-family: 'robotomedium';
 }
 
 @media screen and (min-width: 667px) {
@@ -841,8 +841,6 @@ footer nav {
   width: 90%;
   height: 90%;
   background: linear-gradient(-90deg, #9356DC, #FF79DA);
-  background: -moz-linear-gradient(-90deg, #9356DC, #FF79DA);
-  background: -webkit-linear-gradient(-90deg, #9356DC, #FF79DA);
   width: 90%;
   height: 90%;
   position: absolute;
@@ -986,7 +984,7 @@ footer nav {
   font-size: 1.5rem;
   display: flex;
   align-items: center;
-  margin-right: 9rem;
+  margin-right: 7rem;
   position: relative;
   top: 1rem;
   justify-content: space-between;
@@ -1052,8 +1050,6 @@ footer nav {
 
 .coeur_menus:hover .bloc_couleur {
   background: linear-gradient(-90deg, #9356DC, #FF79DA);
-  background: -moz-linear-gradient(-90deg, #9356DC, #FF79DA);
-  background: -webkit-linear-gradient(-90deg, #9356DC, #FF79DA);
   cursor: pointer;
   width: 39%;
   height: 40%;
