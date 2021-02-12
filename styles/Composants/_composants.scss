@@ -5,7 +5,7 @@
     width: 60%;
     font-size: 1.05rem;
     color: white;
-    font-family: 'Roboto Regular';
+    font-family: 'robotomedium', sans-serif;
     padding-left: 1.25rem;
     padding-right: 1.25rem; 
     height: 3.5rem;
@@ -23,14 +23,15 @@
 }
 
 .commander {
-    border: 2px solid brown;
+    //border: 2px solid brown;
+    border: none;
     background: linear-gradient(-10deg, $primaire, $secondaire);
     border-radius: 40px 40px 40px 40px;
     width: 50%;
     font-size: 1.05rem;
     color: white;
-    font-family: 'Roboto Regular';
-    margin-left: 23.5%;
+    font-family: 'robotomedium', sans-serif;
+    //margin-left: 23.5%;
     height: 3.5rem;
     margin-bottom: 2rem;
     @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.15));  
@@ -41,10 +42,9 @@
     }
     @include mobile-only {
         height: 6rem;
-        width: 60%;
+        //width: 60%;
         max-width: 262px;
         font-size: 1.75rem;
-        margin-left: 0%;
     } 
 }
 

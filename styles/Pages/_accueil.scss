@@ -174,7 +174,7 @@
         display: flex;
         //flex-direction: column;
         align-items: center;
-        border: 2px solid red;
+        //border: 2px solid red;
         display: flex;
         text-align: center;
         width: 17rem;
@@ -218,7 +218,7 @@
 }
 
 .fonctionnement {
-    border: 2px solid red;
+    //border: 2px solid red;
     padding: 1rem;
     height: auto;
     display: flex;
@@ -240,7 +240,7 @@
         padding-bottom: 1rem;
     }
     & > h2 {
-        border: 2px solid purple;
+        //border: 2px solid purple;
         overflow: hidden;
         position: relative;
         @include mobile-only {
@@ -264,7 +264,7 @@
 
 
 .étapes { // zone fonctionnement
-    border: 2px solid blue;
+    //border: 2px solid blue;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -305,7 +305,7 @@
     height: auto;
     font-size: 1rem;
     padding-right: 1rem;
-    font-family: 'Roboto Regular';
+    font-family: 'robotoregular';
     @include mobile-only {
         padding-right: 1rem;
     }
@@ -316,6 +316,7 @@
     width: auto;
     color: rgba($color: #000000, $alpha: 0.5);
     margin-right: 0.25rem;
+    padding-right: 1rem;
     @include mobile-only {
         width: fit-content;
     }
@@ -337,7 +338,7 @@
 }
 
 .restaurants { // zone Restaurants
-    border: 2px solid blue;
+    //border: 2px solid blue;
     padding: 1rem;
     height: auto;
     padding-bottom: 3rem;
@@ -359,7 +360,7 @@
         //border: 2px solid red;
         margin-bottom: 3rem;
         @include mobile-only {
-        border: 2px solid red;
+        //border: 2px solid red;
         padding-right: 100%;
         overflow: hidden;
         position: relative;
@@ -393,7 +394,7 @@
 }
 
 .vignette {
-    border: 1px solid red;
+    //border: 1px solid red;
     transform: scale(1);
     margin-bottom: 1rem;
     border-radius: 20px 20px 20px 20px;
@@ -423,7 +424,7 @@
         margin-bottom: 5%;
     }
     &__img {
-        border: 2px solid green;
+        //border: 2px solid green;
         width: 100%;
         height: 14rem;
         position: relative;
@@ -441,7 +442,7 @@
         width: 5rem;
         height: 2rem;
         font-size: 0.95rem;
-        font-family: 'Roboto Medium';
+        font-family: 'robotomedium', sans-serif;
         color: darken($color: $tertiaire, $amount: 35);
         background-color: $tertiaire;
         position: absolute; 
@@ -453,7 +454,7 @@
         justify-content: center;          
     }
     &__des {
-        border: 2px solid blue;
+        //border: 2px solid blue;
         display: flex;
         align-items: flex-start;
         width: 100%;
