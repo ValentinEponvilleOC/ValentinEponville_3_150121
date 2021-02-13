@@ -40,16 +40,10 @@
 }
 
 body {
-  width: 375px;
   margin: auto;
   font-family: 'robotoregular', sans-serif;
   z-index: 1000;
-}
-
-@media screen and (min-width: 667px) {
-  body {
-    width: auto;
-  }
+  width: auto;
 }
 
 @media screen and (min-width: 667px) {
@@ -84,7 +78,6 @@ h4 {
   background: linear-gradient(-10deg, #9356DC, #FF79DA);
   border-radius: 40px 40px 40px 40px;
   border: none;
-  width: 60%;
   font-size: 1.05rem;
   color: white;
   font-family: 'robotomedium', sans-serif;
@@ -143,16 +136,13 @@ header {
   align-items: center;
   height: 3.5rem;
   box-shadow: 0px 5px 1px 0px rgba(41, 41, 41, 0.25);
-  overflow: hidden;
-  width: auto;
   z-index: 1002;
   position: relative;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 667px) {
   header {
-    justify-content: center;
-    padding-left: 3rem;
     height: 3.2rem;
     z-index: 1002;
   }
@@ -162,32 +152,19 @@ header > .gps {
   display: none;
 }
 
-@media screen and (min-width: 667px) {
-  header > .gps {
-    display: flex;
-    margin-left: 3rem;
-    height: auto;
-  }
-}
-
 header a {
   color: black;
 }
 
 footer {
   background: #242424;
-  width: 100%;
   height: 13rem;
   display: flex;
-  align-items: center;
-  position: relative;
 }
 
 @media screen and (min-width: 667px) {
   footer {
     justify-content: center;
-    align-items: flex-start;
-    width: auto;
   }
 }
 
@@ -199,27 +176,13 @@ footer a {
 .proposer {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 24px;
-}
-
-@media screen and (min-width: 667px) {
-  .proposer {
-    height: auto;
-  }
 }
 
 .devenir {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   height: 24px;
-}
-
-@media screen and (min-width: 667px) {
-  .devenir {
-    height: auto;
-  }
 }
 
 .contenu {
@@ -227,32 +190,26 @@ footer a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
   height: 100%;
   width: 15rem;
   line-height: 0rem;
   margin-left: 1rem;
-  position: relative;
 }
 
 @media screen and (min-width: 667px) {
   .contenu {
     flex-direction: row;
-    display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     width: auto;
     height: auto;
     margin-right: 1rem;
-    top: 0rem;
   }
 }
 
 .contenu figure {
-  display: flex;
   position: relative;
-  bottom: 0.5rem;
   right: 2.45rem;
 }
 
@@ -270,7 +227,6 @@ footer a {
 @media screen and (min-width: 667px) {
   .titre_footer {
     width: auto;
-    position: unset;
   }
 }
 
@@ -291,15 +247,6 @@ footer nav {
 @media screen and (min-width: 667px) {
   footer nav {
     margin-top: 2rem;
-  }
-}
-
-@keyframes remplissage {
-  0% {
-    height: 0%;
-  }
-  100% {
-    height: 33%;
   }
 }
 
@@ -332,8 +279,7 @@ footer nav {
 
 .animation {
   height: 100%;
-  width: 100%;
-  margin: auto;
+  width: 375px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -345,15 +291,12 @@ footer nav {
 
 @media screen and (min-width: 667px) {
   .animation {
-    align-items: center;
+    width: 100%;
   }
 }
 
 .animation > .icônes_loader {
   width: 50%;
-  opacity: 100%;
-  position: absolute;
-  z-index: 1002;
   transform: scale(1);
   display: flex;
   justify-content: center;
@@ -410,7 +353,6 @@ footer nav {
   animation: révélation 750ms ease-in-out backwards;
   animation-iteration-count: 2;
   animation-delay: 250ms;
-  z-index: 1001;
 }
 
 .infos_localisation--header {
@@ -432,7 +374,7 @@ footer nav {
   justify-content: center;
   align-items: center;
   background-color: #EAEAEA;
-  width: 375px;
+  width: 100%;
 }
 
 @media screen and (min-width: 667px) {
@@ -448,22 +390,15 @@ footer nav {
 }
 
 .main_accueil {
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 @media screen and (min-width: 667px) {
   .main_accueil {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
     width: 65%;
     margin: auto;
-    height: auto;
-    z-index: 999;
+    display: flex;
   }
 }
 
@@ -472,12 +407,11 @@ footer nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  overflow: hidden;
 }
 
 .intro > h2 {
-  display: flex;
-  align-items: center;
-  display: flex;
   text-align: center;
   width: 17rem;
   position: relative;
@@ -487,28 +421,19 @@ footer nav {
 @media screen and (min-width: 667px) {
   .intro > h2 {
     width: 73%;
-    justify-content: center;
     transform: scale(1.25);
   }
 }
 
 .description_et_bouton {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   text-align: center;
   background-color: #F6F6F6;
-  height: auto;
-  z-index: 1000;
   padding-bottom: 4rem;
 }
 
 @media screen and (min-width: 667px) {
   .description_et_bouton {
-    height: auto;
-    width: 100%;
     justify-content: space-between;
-    align-items: center;
     padding-bottom: 3rem;
   }
 }
@@ -527,29 +452,27 @@ footer nav {
 
 .fonctionnement {
   padding: 1rem;
-  height: auto;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 667px) {
   .fonctionnement {
     align-items: center;
+    padding-bottom: 3rem;
   }
 }
 
 @media screen and (min-width: 1430px) {
   .fonctionnement {
     flex-direction: row;
-    display: flex;
     width: 120%;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 2rem;
-    padding: 0rem;
-    padding-top: 1rem;
     padding-bottom: 1rem;
+    overflow: visible;
   }
 }
 
@@ -558,37 +481,24 @@ footer nav {
   position: relative;
 }
 
-@media screen and (min-width: 667px) {
-  .fonctionnement > h2 {
-    padding-right: 0%;
-    padding-left: 0%;
-    display: flex;
-    justify-content: center;
-    left: 0rem;
-    margin-bottom: 2rem;
-  }
-}
-
 @media screen and (min-width: 1430px) {
   .fonctionnement > h2 {
-    padding-right: 50%;
-    padding-left: 50%;
     display: flex;
     justify-content: center;
-    left: 0rem;
+    padding-right: 50%;
+    padding-left: 50%;
     transform: scale(1.25);
   }
 }
 
 .étapes {
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   background-color: #F6F6F6;
   margin: 1rem;
   border-radius: 25px 25px 25px 25px;
   height: 4rem;
-  width: 100%;
+  width: 19rem;
   position: relative;
   right: 0.85rem;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
@@ -607,19 +517,14 @@ footer nav {
   .étapes {
     right: 0rem;
     width: 20rem;
-    justify-content: center;
     transform: scale(1.25);
-    padding: 0rem;
   }
 }
 
 @media screen and (min-width: 1430px) {
   .étapes {
     width: 20%;
-    right: 0rem;
-    justify-content: center;
     transform: scale(1.5);
-    padding: 0rem;
   }
 }
 
@@ -630,23 +535,9 @@ footer nav {
   font-family: 'robotomedium';
 }
 
-@media screen and (min-width: 667px) {
-  .étapes h3, .fa-mobile-alt, .fa-bars, .fa-store {
-    padding-right: 1rem;
-  }
-}
-
 .fa-mobile-alt, .fa-bars, .fa-store {
-  width: auto;
   color: rgba(0, 0, 0, 0.5);
   margin-right: 0.25rem;
-  padding-right: 1rem;
-}
-
-@media screen and (min-width: 667px) {
-  .fa-mobile-alt, .fa-bars, .fa-store {
-    width: fit-content;
-  }
 }
 
 .petits_cercles {
@@ -666,12 +557,10 @@ footer nav {
 
 .restaurants {
   padding: 1rem;
-  height: auto;
   padding-bottom: 3rem;
   background-color: #F6F6F6;
-  display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 667px) {
@@ -679,8 +568,13 @@ footer nav {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    width: fit-content;
+  }
+}
+
+@media screen and (min-width: 1430px) {
+  .restaurants {
     justify-content: space-between;
-    position: relative;
   }
 }
 
@@ -691,7 +585,6 @@ footer nav {
 @media screen and (min-width: 667px) {
   .restaurants > h2 {
     padding-right: 100%;
-    overflow: hidden;
     position: relative;
     left: 3%;
     bottom: 1rem;
@@ -711,35 +604,19 @@ footer nav {
   text-decoration: none;
   color: black;
   display: flex;
+  width: 343px;
   height: 16rem;
   flex-direction: column;
   align-items: flex-end;
-  z-index: 1014;
-}
-
-@media screen and (min-width: 667px) {
-  .vignette a {
-    margin: auto;
-    width: auto;
-    height: auto;
-  }
 }
 
 .vignette {
   transform: scale(1);
   margin-bottom: 1rem;
   border-radius: 20px 20px 20px 20px;
-  width: auto;
-  height: 16rem;
-  width: 100%;
-  height: 20%;
-  display: flex;
-  flex-direction: column;
   overflow: hidden;
-  justify-content: flex-start;
-  align-items: center;
   background-color: white;
-  z-index: 1014;
+  width: fit-content;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
 }
 
@@ -748,32 +625,15 @@ footer nav {
     margin: auto;
     margin-top: 5%;
     margin-bottom: 5%;
-    width: 339px;
-    height: 258px;
-  }
-}
-
-@media screen and (min-width: 1430px) {
-  .vignette {
-    margin: unset;
-    margin-top: 5%;
-    margin-bottom: 5%;
   }
 }
 
 .vignette__img {
-  width: 100%;
   height: 14rem;
   position: relative;
   display: flex;
   bottom: 3rem;
   margin: 0%;
-}
-
-@media screen and (min-width: 667px) {
-  .vignette__img {
-    width: auto;
-  }
 }
 
 .vignette__img > img {
@@ -797,30 +657,23 @@ footer nav {
 }
 
 .vignette__des {
-  display: flex;
-  align-items: flex-start;
   width: 100%;
-  height: auto;
   position: relative;
   bottom: 2.5rem;
 }
 
 .nom_et_menu {
-  height: 4rem;
-  width: 75%;
   line-height: 0.5rem;
   padding-left: 1rem;
 }
 
 .coeur_accueil {
   cursor: pointer;
-  transform: scale(1);
   position: absolute;
   right: -0.40rem;
   bottom: 0.5rem;
   width: 2rem;
   height: 2rem;
-  z-index: 1015;
 }
 
 .coeur_accueil > img {
@@ -829,14 +682,10 @@ footer nav {
 }
 
 .coeur_accueil:hover .bloc_couleur {
-  width: 90%;
-  height: 90%;
   background: linear-gradient(-90deg, #9356DC, #FF79DA);
   width: 90%;
   height: 90%;
   position: absolute;
-  top: -0rem;
-  display: flex;
   z-index: 1014;
   transform: translateY(-1rem);
   transition: transform 1000ms;
@@ -844,11 +693,6 @@ footer nav {
   transform-origin: bottom;
   opacity: 100%;
   transition: transform 700ms, opacity 700ms;
-}
-
-.bloc_couleur {
-  transform: scaleY(0);
-  opacity: 0%;
 }
 
 @keyframes logo_v {

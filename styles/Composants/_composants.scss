@@ -2,7 +2,6 @@
     background: linear-gradient(-10deg, $primaire, $secondaire);
     border-radius: 40px 40px 40px 40px;
     border: none;
-    width: 60%;
     font-size: 1.05rem;
     color: white;
     font-family: 'robotomedium', sans-serif;
@@ -31,7 +30,6 @@
     font-size: 1.05rem;
     color: white;
     font-family: 'robotomedium', sans-serif;
-    //margin-left: 23.5%;
     height: 3.5rem;
     margin-bottom: 2rem;
     @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.15));  
@@ -42,7 +40,6 @@
     }
     @include larger-than-mobile {
         height: 6rem;
-        //width: 60%;
         max-width: 262px;
         font-size: 1.75rem;
     } 

@@ -60,18 +60,12 @@
 
 body {
     //border: 2px solid brown;
-    width: 375px;
-    //height: auto;
     margin: auto;
     font-family: 'robotoregular', sans-serif;
-    //flex-direction: column;
-    //justify-content: stretch;
-    //align-items: center;
     z-index: 1000;
-    //position: relative;
+    width: auto;
     @include larger-than-mobile {
         //border: 5px solid greenyellow;
-        width: auto;
     }
 }
 
