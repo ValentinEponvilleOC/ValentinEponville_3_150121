@@ -15,7 +15,7 @@
         @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 1));
         @include fondu_blanc (white, 0.5);
     }
-    @include mobile-only {
+    @include larger-than-mobile {
         height: 6rem;
         width: 25rem;
         font-size: 1.75rem;
@@ -40,7 +40,7 @@
         @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 1));
         @include fondu_blanc (white, 0.5);
     }
-    @include mobile-only {
+    @include larger-than-mobile {
         height: 6rem;
         //width: 60%;
         max-width: 262px;

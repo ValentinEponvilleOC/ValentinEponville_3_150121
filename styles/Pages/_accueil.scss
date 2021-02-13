@@ -51,7 +51,7 @@
     z-index: 1020;
     background-color: white;
     animation: loader_durée 0ms both; // 1750 ms
-    @include mobile-only {
+    @include larger-than-mobile {
         align-items: center;
     }
     & > .icônes_loader {
@@ -64,12 +64,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @include mobile-only {
+        @include larger-than-mobile {
         }
         & > img {
             z-index: 1001;
             transform: scale(2);
-            @include mobile-only {
+            @include larger-than-mobile {
                 transform: scale(1);
             }
         }
@@ -82,7 +82,7 @@
             position: absolute;
             z-index: 1000;
             transform: scale(2);
-            @include mobile-only {
+            @include larger-than-mobile {
                 transform: scale(1);
             }
         }  
@@ -118,7 +118,7 @@
 
 .infos_localisation--header { // box contenant icône
     display: none;
-    @include mobile-only {
+    @include larger-than-mobile {
     //border: 3px solid turquoise;
     display: flex;
     justify-content: center;
@@ -135,7 +135,7 @@
     align-items: center;
     background-color: #EAEAEA;
     width: 375px;
-    @include mobile-only {
+    @include larger-than-mobile {
         display: none;
     }
 }
@@ -151,7 +151,7 @@
     flex-direction: column;
     //justify-content: flex-start;
     align-items: center;
-    @include mobile-only {
+    @include larger-than-mobile {
     //border: 5px solid purple;
     display: flex;
     flex-direction: column;
@@ -180,7 +180,7 @@
         width: 17rem;
         position: relative;
         top: 1rem;
-        @include mobile-only {
+        @include larger-than-mobile {
             width: 73%;
             justify-content: center;
             transform: scale(1.25);
@@ -198,7 +198,7 @@
     height: auto;
     z-index: 1000;
     padding-bottom: 4rem;
-    @include mobile-only {
+    @include larger-than-mobile {
         height: auto;
         width: 100%;
         justify-content: space-between;
@@ -211,7 +211,7 @@
     //border: 2px solid red;
     font-size: 1.1rem;
     color:rgba(41, 41, 41, 0.75);
-    @include mobile-only {
+    @include larger-than-mobile {
         font-size: 1.5rem;
         width: 30rem;
     }
@@ -225,10 +225,10 @@
     flex-direction: column;
     align-items: flex-start;
     //margin-right: 1rem;
-    @include mobile-only {
+    @include larger-than-mobile {
         align-items: center;
     }
-    @include large-screen {
+    @include larger-than-larger {
         flex-direction: row;
         display: flex;
         width: 120%;
@@ -243,7 +243,7 @@
         //border: 2px solid purple;
         overflow: hidden;
         position: relative;
-        @include mobile-only {
+        @include larger-than-mobile {
             padding-right: 0%;
             padding-left: 0%;
             display: flex;
@@ -251,7 +251,7 @@
             left: 0rem;
             margin-bottom: 2rem;
         }
-        @include large-screen {
+        @include larger-than-larger {
             padding-right: 50%;
             padding-left: 50%;
             display: flex;
@@ -284,14 +284,14 @@
             color: rgba($color: $primaire, $alpha: 1);
         }
     }
-    @include mobile-only {
+    @include larger-than-mobile {
         right: 0rem;
         width: 20rem;
         justify-content: center;
         transform:scale(1.25);
         padding: 0rem;
     }
-    @include large-screen {
+    @include larger-than-larger {
         width: 20%;
         right: 0rem;
         justify-content: center;
@@ -306,7 +306,7 @@
     font-size: 1rem;
     padding-right: 1rem;
     font-family: 'robotomedium';
-    @include mobile-only {
+    @include larger-than-mobile {
         padding-right: 1rem;
     }
 }
@@ -317,7 +317,7 @@
     color: rgba($color: #000000, $alpha: 0.5);
     margin-right: 0.25rem;
     padding-right: 1rem;
-    @include mobile-only {
+    @include larger-than-mobile {
         width: fit-content;
     }
 }
@@ -346,7 +346,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    @include mobile-only {
+    @include larger-than-mobile {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -354,12 +354,12 @@
         position: relative;
         //bottom: 2rem;
     }
-    @include large-screen {
+    @include larger-than-larger {
     }
     & > h2 {
         //border: 2px solid red;
         margin-bottom: 3rem;
-        @include mobile-only {
+        @include larger-than-mobile {
         //border: 2px solid red;
         padding-right: 100%;
         overflow: hidden;
@@ -368,7 +368,7 @@
         bottom: 1rem;
         margin-bottom: 0rem;
         }
-        @include large-screen {
+        @include larger-than-larger {
         transform: scale(1.25);
         left: 15%;
         padding-right: 100%;
@@ -386,7 +386,7 @@
     align-items: flex-end;
     //flex-wrap: wrap;
     z-index: 1014;
-    @include mobile-only {
+    @include larger-than-mobile {
         margin: auto;
         width: auto;
         height: auto;
@@ -410,14 +410,14 @@
     background-color: white;
     z-index: 1014;
     @include ombre_portée (0px 10px 10px rgba($color: black, $alpha: 0.15));
-    @include mobile-only {
+    @include larger-than-mobile {
         margin: auto;
         margin-top: 5%;
         margin-bottom: 5%;
         width: 339px;
         height: 258px;
     }
-    @include large-screen {
+    @include larger-than-larger {
         //transform: scale(1.25);
         margin: unset;
         margin-top: 5%;
@@ -431,7 +431,7 @@
         display: flex;
         bottom: 3rem;
         margin: 0%;
-        @include mobile-only {
+        @include larger-than-mobile {
             width: auto;          
         }
         & > img {

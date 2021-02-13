@@ -59,31 +59,24 @@
 }
 
 body {
-    width: 375px;
-    height: auto;
-    margin: auto;
-    //position: absolute;
-    //padding: auto;
-    font-family: 'robotoregular', sans-serif;
-    //display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-    align-items: center;
     //border: 2px solid brown;
+    width: 375px;
+    //height: auto;
+    margin: auto;
+    font-family: 'robotoregular', sans-serif;
+    //flex-direction: column;
+    //justify-content: stretch;
+    //align-items: center;
     z-index: 1000;
-    position: relative;
-    //animation: body 0ms 1250ms backwards;
-    @include mobile-only {
+    //position: relative;
+    @include larger-than-mobile {
         //border: 5px solid greenyellow;
         width: auto;
-        height: 100%;
-        justify-content: stretch;
-        align-items: center;
     }
 }
 
 article {
-    @include mobile-only {
+    @include larger-than-mobile {
         //border: 3px solid orange;
         width: 100%;
         height: auto;
@@ -93,8 +86,7 @@ article {
 
 h2 {
     font-size: 1.5rem;
-    font-family: 'robotoregular', sans-serif;
-    @include mobile-only {
+    @include larger-than-mobile {
         font-size: 2rem;
     }
 }
