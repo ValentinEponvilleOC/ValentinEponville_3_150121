@@ -43,7 +43,13 @@ body {
   margin: auto;
   font-family: 'robotoregular', sans-serif;
   z-index: 1000;
-  width: auto;
+  width: 375px;
+}
+
+@media screen and (min-width: 667px) {
+  body {
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 667px) {
@@ -286,7 +292,7 @@ footer nav {
   position: fixed;
   z-index: 1020;
   background-color: white;
-  animation: loader_durée 0ms both;
+  animation: loader_durée 1750ms both;
 }
 
 @media screen and (min-width: 667px) {
@@ -921,12 +927,6 @@ footer nav {
 }
 
 @media screen and (min-width: 667px) {
-  .type_repas > h3 {
-    margin-right: 80%;
-  }
-}
-
-@media screen and (min-width: 667px) {
   .type_repas {
     display: flex;
     justify-content: center;
@@ -941,6 +941,12 @@ footer nav {
     justify-content: space-between;
     flex-wrap: wrap;
     height: auto;
+  }
+}
+
+@media screen and (min-width: 667px) {
+  .type_repas > h3 {
+    margin-right: 80%;
   }
 }
 
@@ -1113,12 +1119,9 @@ article section:nth-child(5) .plat_cache {
   flex: 0 0 auto;
   position: relative;
   left: 10%;
-  /*transition-property: position relative;*/
 }
 
 .plat__des h4 {
-  /*position: relative;
-    bottom: 0.25rem;*/
   display: inline;
   vertical-align: middle;
   height: 1.5rem;
@@ -1126,13 +1129,9 @@ article section:nth-child(5) .plat_cache {
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0%;
-  /*margin-block-start: 0rem;
-    margin-block-end: 0rem;*/
 }
 
 .plat__des p {
-  /*position: relative;
-    bottom: 0.25rem;*/
   display: inline;
   vertical-align: middle;
   height: 1rem;
@@ -1140,8 +1139,6 @@ article section:nth-child(5) .plat_cache {
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 0%;
-  /*margin-block-start: 0rem;
-    margin-block-end: 0rem;*/
 }
 
 .zone_bouton {
