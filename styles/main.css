@@ -867,7 +867,6 @@ footer nav {
 @media screen and (min-width: 667px) {
   .coeur_menus {
     right: 2rem;
-    transform: scale(1.5);
   }
 }
 
@@ -1094,8 +1093,6 @@ article section:nth-child(5) .plat_cache {
 
 .plat:hover > .plat__des {
   flex: 0.1 0 auto;
-  white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
 }
 

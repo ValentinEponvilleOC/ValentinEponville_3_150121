@@ -143,7 +143,7 @@
     z-index: 5;
     @include larger-than-mobile {
         right: 2rem;
-        transform: scale(1.5);
+        //transform: scale(1.5);
     }
     & > figure {
         //border: 2px solid purple;
@@ -303,8 +303,8 @@ article section:nth-child(5) .plat_cache {
         }
         &:hover > &__des { // animation de validation de commande
             flex: 0.1 0 auto;
-            white-space: nowrap;
-            overflow: hidden;
+            //white-space: nowrap;
+            //overflow: hidden;
             text-overflow: ellipsis;
             @include larger-than-mobile {
                 flex: 0.17 0 auto;
